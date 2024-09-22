@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "7cca6ba0c05ea261",
+    "type": "split",
+    "children": [
+      {
+        "id": "0bc0595491b74c77",
+        "type": "tabs",
+        "dimension": 70.58823529411765,
+        "children": [
+          {
+            "id": "acd4118873750484",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "first-year (1)/Mathematical analysis (H).md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "9552a1ddfed22164",
+        "type": "tabs",
+        "dimension": 29.411764705882355,
+        "children": [
+          {
+            "id": "8370802018235f73",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "978303256663ea9d",
+    "type": "split",
+    "children": [
+      {
+        "id": "fec5291e90f04e9f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f5b1acce42def0fc",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ecbc244781746c82",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "82a6b65c6e0b9b7e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1299a42c2c43fbe0",
+    "type": "split",
+    "children": [
+      {
+        "id": "45c2867ef687a450",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c22cec1f12b65b9e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "first-year (1)/Mathematical analysis (H).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f516dd1cf5b90c20",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "first-year (1)/Mathematical analysis (H).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ecb12a4b8b2a6020",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "fed53f7da010e232",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "first-year (1)/Mathematical analysis (H).md"
+              }
+            }
+          },
+          {
+            "id": "35db6b7bab3a613e",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "acd4118873750484",
+  "lastOpenFiles": [
+    "first-year (1)/Mathematical analysis (H).md",
+    "欢迎.md",
+    "first-year (1)"
+  ]
+}
