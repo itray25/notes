@@ -6,7 +6,6 @@
       {
         "id": "0bc0595491b74c77",
         "type": "tabs",
-        "dimension": 70.58823529411765,
         "children": [
           {
             "id": "acd4118873750484",
@@ -23,16 +22,19 @@
         ]
       },
       {
-        "id": "9552a1ddfed22164",
+        "id": "9f3a283159a03cd5",
         "type": "tabs",
-        "dimension": 29.411764705882355,
         "children": [
           {
-            "id": "8370802018235f73",
+            "id": "3b125062f7c8940f",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "first-year (1)/Mathematical analysis (H).md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -171,9 +173,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "acd4118873750484",
+  "active": "3b125062f7c8940f",
   "lastOpenFiles": [
+    "first-year (1)/Fundamental of Programming(H).md",
     "first-year (1)/Mathematical analysis (H).md",
+    "新建 Text Document.txt",
     "欢迎.md",
     "first-year (1)"
   ]
