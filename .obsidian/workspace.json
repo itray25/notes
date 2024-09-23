@@ -18,30 +18,6 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "d5c7f96576816be1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "56d682281a88c93d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
         ]
       }
@@ -179,7 +155,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "acd4118873750484",
+  "active": "35db6b7bab3a613e",
   "lastOpenFiles": [
     "Fundamental of Programming(H).md",
     "conflict-files-obsidian-git.md",
