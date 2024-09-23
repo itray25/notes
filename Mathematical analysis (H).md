@@ -32,13 +32,13 @@ $C,x^{\alpha},a^{x},$ 三角函数 $,log_a{x},$ 反三角函数 称为基本初�
 4.1 **符号函数**  
 $$y=sgn(x)=\begin{cases} -1  ,x<0 \\ 0,x=0 \\ 1,x>0 \end{cases}$$  
 4.2 **取整函数**  
-$f(x)=[x]$  
+$$f(x)=[x]$$
 4.3 **黎曼函数**  
-$$f(x)=\begin{cases} x,x=0 / x=1 \\\frac{1}{p},x=\frac{q}{p},(p,q)=1 \\ x,x\in (0,1) \backslash Q \end{cases}$$  
+$$ f(x) = \begin{cases} x, & x = 0 \text{ 或 } x = 1 \\ \frac{1}{p}, & x = \frac{q}{p}, (p, q) = 1 \\ x, & x \in (0,1) \setminus \mathbb{Q} \end{cases} $$
 4.4 **迪利克雷函数**  
-$$y=\begin{cases}  1,x\in Q\\ 0,x\in Q^C \end{cases}$$
+$$ y = \begin{cases} 1, & x \in \mathbb{Q} \\ 0, & x \in \mathbb{Q}^C \end{cases} $$
 
 ##### 5. 其他函数
 
-5.1 **隐函数** $F(x,y)=0$ 如 $x^2+y^2=R^2$  
-5.2 **参数表示** $\begin{cases} x=acos(t) \\ y=bsin(t) \end{cases}$
+5.1 **隐函数** $$ F(x, y) = 0 \text{，例如 } x^2 + y^2 = R^2 $$
+5.2 **参数表示** $$ \begin{cases} x = a \cos(t) \\ y = b \sin(t) \end{cases} $$
