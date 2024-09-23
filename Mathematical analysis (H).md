@@ -41,4 +41,4 @@ $$y=\begin{cases}  1,x\in Q\\ 0,x\in Q^C \end{cases}$$
 ##### 5. 其他函数
 
 5.1 **隐函数** $F(x,y)=0$ 如$x^2+y^2=R^2$  
-5.2 **参数表示** $\begin{cases}x=acos(t)\\ y=bsin(t) \end{cases}$
+5.2 **参数表示** $\begin{cases}x=acos(t) \\ y=bsin(t) \end{cases}$
