@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematical analysis (H).md",
+                "file": "Fundamental of Programming(H).md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematical analysis (H).md",
+                "file": "Fundamental of Programming(H).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematical analysis (H).md",
+                "file": "Fundamental of Programming(H).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematical analysis (H).md"
+                "file": "Fundamental of Programming(H).md"
               }
             }
           },
@@ -157,9 +157,13 @@
   },
   "active": "acd4118873750484",
   "lastOpenFiles": [
+    "Pasted image 20240923230754.png",
+    "Pasted image 20240923230721.png",
+    "Pasted image 20240923230638.png",
+    "15278352-9787115587558_C++程序设计：思想与方法 ideas and methods 慕课版 2.pdf",
+    "Mathematical analysis (H).md",
     "Fundamental of Programming(H).md",
     "conflict-files-obsidian-git.md",
-    "Mathematical analysis (H).md",
     "Mathematical analysis (H) 1.md",
     "first-year (1)/Mathematical analysis (H).md",
     "first-year (1)/Fundamental of Programming(H).md",
