@@ -2,5 +2,6 @@
   "obsidian-git",
   "obsidian-vimrc-support",
   "better-export-pdf",
-  "obsius-publish"
+  "obsius-publish",
+  "obsidian-plugin-prettier"
 ]
