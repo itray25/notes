@@ -20,24 +20,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "9f3a283159a03cd5",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "3b125062f7c8940f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "first-year (1)/Mathematical analysis (H).md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -173,7 +155,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3b125062f7c8940f",
+  "active": "acd4118873750484",
   "lastOpenFiles": [
     "first-year (1)/Fundamental of Programming(H).md",
     "first-year (1)/Mathematical analysis (H).md",
