@@ -11,8 +11,12 @@
             "id": "acd4118873750484",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Mathematical analysis (H).md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Mathematical analysis (H).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Mathematical analysis (H).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -119,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "first-year (1)/Mathematical analysis (H).md"
+                "file": "Mathematical analysis (H).md"
               }
             }
           },
@@ -149,12 +155,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "35db6b7bab3a613e",
+  "active": "acd4118873750484",
   "lastOpenFiles": [
     "Fundamental of Programming(H).md",
     "Mathematical analysis (H).md",
-    "first-year (1)/Fundamental of Programming(H).md",
     "first-year (1)/Mathematical analysis (H).md",
+    "first-year (1)/Fundamental of Programming(H).md",
     "新建 Text Document.txt",
     "欢迎.md",
     "first-year (1)"
