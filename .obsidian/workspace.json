@@ -11,12 +11,8 @@
             "id": "acd4118873750484",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "first-year (1)/Mathematical analysis (H).md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "first-year (1)/Mathematical analysis (H).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "first-year (1)/Mathematical analysis (H).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -155,8 +149,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "acd4118873750484",
+  "active": "35db6b7bab3a613e",
   "lastOpenFiles": [
+    "Fundamental of Programming(H).md",
+    "Mathematical analysis (H).md",
     "first-year (1)/Fundamental of Programming(H).md",
     "first-year (1)/Mathematical analysis (H).md",
     "新建 Text Document.txt",
