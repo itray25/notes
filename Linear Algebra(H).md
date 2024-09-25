@@ -59,7 +59,15 @@ a_{m1} & a_{m2} & a_{m3} & \dots & a_{mn} & b_{m}
 $$  
 
 2.3 **基础定义**  
-$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$
+
+  $$
+  \begin{pmatrix}
+a & b \\
+ c & d
+\end{pmatrix}
+$$
+
+
 
 -  $\begin{pmatrix}a_{1},a_{2},\dots\end{pmatrix}$ 称为**行矩阵**/行向量  
 -  $\begin{pmatrix}a_{1}\\a_{2}\\\dots\end{pmatrix}$ 称为**列矩阵**  
@@ -79,7 +87,7 @@ a_{11} & 0 & 0 & 0 \\
 0 & 0 & a_{13} & 0 \\
 0 & 0 & 0 & a_{14}
 \end{pmatrix}
-$$  
+$$   
 (3) **单位矩阵** $E$：主对角线值全为1的对角矩阵  
 $$
 \begin{pmatrix}
