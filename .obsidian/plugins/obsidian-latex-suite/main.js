@@ -77,7 +77,7 @@ var __async = (__this, __arguments, generator) => {
     step((generator = generator.apply(__this, __arguments)).next());
   });
 };
-var __await = function(promise, isYieldStar) {
+var __await = function (promise, isYieldStar) {
   this[0] = promise;
   this[1] = isYieldStar;
 };
@@ -140,7 +140,7 @@ var require_implementation = __commonJS({
       }
       return arr;
     };
-    var joiny = function(arr, joiner) {
+    var joiny = function (arr, joiner) {
       var str = "";
       for (var i = 0; i < arr.length; i += 1) {
         str += arr[i];
@@ -157,7 +157,7 @@ var require_implementation = __commonJS({
       }
       var args = slicy(arguments, 1);
       var bound;
-      var binder = function() {
+      var binder = function () {
         if (this instanceof bound) {
           var result = target.apply(
             this,
@@ -371,7 +371,7 @@ var require_get_intrinsic = __commonJS({
     var $TypeError = require_type();
     var $URIError = require_uri();
     var $Function = Function;
-    var getEvalledConstructor = function(expressionSyntax) {
+    var getEvalledConstructor = function (expressionSyntax) {
       try {
         return $Function('"use strict"; return (' + expressionSyntax + ").constructor;")();
       } catch (e) {
@@ -385,10 +385,10 @@ var require_get_intrinsic = __commonJS({
         $gOPD = null;
       }
     }
-    var throwTypeError = function() {
+    var throwTypeError = function () {
       throw new $TypeError();
     };
-    var ThrowTypeError = $gOPD ? function() {
+    var ThrowTypeError = $gOPD ? function () {
       try {
         arguments.callee;
         return throwTypeError;
@@ -402,7 +402,7 @@ var require_get_intrinsic = __commonJS({
     }() : throwTypeError;
     var hasSymbols = require_has_symbols()();
     var hasProto = require_has_proto()();
-    var getProto = Object.getPrototypeOf || (hasProto ? function(x) {
+    var getProto = Object.getPrototypeOf || (hasProto ? function (x) {
       return x.__proto__;
     } : null);
     var needsEval = {};
@@ -580,7 +580,7 @@ var require_get_intrinsic = __commonJS({
         throw new $SyntaxError("invalid intrinsic syntax, expected opening `%`");
       }
       var result = [];
-      $replace(string2, rePropName, function(match, number2, quote, subString) {
+      $replace(string2, rePropName, function (match, number2, quote, subString) {
         result[result.length] = quote ? $replace(subString, reEscapeChar, "$1") : number2 || match;
       });
       return result;
@@ -891,7 +891,7 @@ var require_implementation2 = __commonJS({
       isArgs = require_isArguments();
       isEnumerable = Object.prototype.propertyIsEnumerable;
       hasDontEnumBug = !isEnumerable.call({ toString: null }, "toString");
-      hasProtoEnumBug = isEnumerable.call(function() {
+      hasProtoEnumBug = isEnumerable.call(function () {
       }, "prototype");
       dontEnums = [
         "toString",
@@ -902,7 +902,7 @@ var require_implementation2 = __commonJS({
         "propertyIsEnumerable",
         "constructor"
       ];
-      equalsConstructorPrototype = function(o) {
+      equalsConstructorPrototype = function (o) {
         var ctor = o.constructor;
         return ctor && ctor.prototype === o;
       };
@@ -931,7 +931,7 @@ var require_implementation2 = __commonJS({
         $webkitStorageInfo: true,
         $window: true
       };
-      hasAutomationEqualityBug = function() {
+      hasAutomationEqualityBug = function () {
         if (typeof window === "undefined") {
           return false;
         }
@@ -950,7 +950,7 @@ var require_implementation2 = __commonJS({
         }
         return false;
       }();
-      equalsConstructorPrototypeIfNotBuggy = function(o) {
+      equalsConstructorPrototypeIfNotBuggy = function (o) {
         if (typeof window === "undefined" || !hasAutomationEqualityBug) {
           return equalsConstructorPrototype(o);
         }
@@ -1025,7 +1025,7 @@ var require_object_keys = __commonJS({
     var originalKeys = Object.keys;
     keysShim.shim = function shimObjectKeys() {
       if (Object.keys) {
-        var keysWorksWithArguments = function() {
+        var keysWorksWithArguments = function () {
           var args = Object.keys(arguments);
           return args && args.length === arguments.length;
         }(1, 2);
@@ -1055,11 +1055,11 @@ var require_define_properties = __commonJS({
     var toStr = Object.prototype.toString;
     var concat = Array.prototype.concat;
     var defineDataProperty = require_define_data_property();
-    var isFunction = function(fn2) {
+    var isFunction = function (fn2) {
       return typeof fn2 === "function" && toStr.call(fn2) === "[object Function]";
     };
     var supportsDescriptors = require_has_property_descriptors()();
-    var defineProperty = function(object2, name, value, predicate) {
+    var defineProperty = function (object2, name, value, predicate) {
       if (name in object2) {
         if (predicate === true) {
           if (object2[name] === value) {
@@ -1075,7 +1075,7 @@ var require_define_properties = __commonJS({
         defineDataProperty(object2, name, value);
       }
     };
-    var defineProperties = function(object2, map) {
+    var defineProperties = function (object2, map) {
       var predicates = arguments.length > 2 ? arguments[2] : {};
       var props = keys(map);
       if (hasSymbols) {
@@ -1097,7 +1097,7 @@ var require_setProto = __commonJS({
     var GetIntrinsic = require_get_intrinsic();
     var originalSetProto = GetIntrinsic("%Object.setPrototypeOf%", true);
     var hasProto = require_has_proto()();
-    module2.exports = originalSetProto || (hasProto ? function(O, proto) {
+    module2.exports = originalSetProto || (hasProto ? function (O, proto) {
       O.__proto__ = proto;
       return O;
     } : null);
@@ -1111,7 +1111,7 @@ var require_getProto = __commonJS({
     var GetIntrinsic = require_get_intrinsic();
     var originalGetProto = GetIntrinsic("%Object.getPrototypeOf%", true);
     var hasProto = require_has_proto()();
-    module2.exports = originalGetProto || (hasProto ? function(O) {
+    module2.exports = originalGetProto || (hasProto ? function (O) {
       return O.__proto__;
     } : null);
   }
@@ -1260,7 +1260,7 @@ var require_object_inspect = __commonJS({
     var hasShammedSymbols = typeof Symbol === "function" && typeof Symbol.iterator === "object";
     var toStringTag = typeof Symbol === "function" && Symbol.toStringTag && (typeof Symbol.toStringTag === hasShammedSymbols ? "object" : "symbol") ? Symbol.toStringTag : null;
     var isEnumerable = Object.prototype.propertyIsEnumerable;
-    var gPO = (typeof Reflect === "function" ? Reflect.getPrototypeOf : Object.getPrototypeOf) || ([].__proto__ === Array.prototype ? function(O) {
+    var gPO = (typeof Reflect === "function" ? Reflect.getPrototypeOf : Object.getPrototypeOf) || ([].__proto__ === Array.prototype ? function (O) {
       return O.__proto__;
     } : null);
     function addNumericSeparator(num, str) {
@@ -1404,7 +1404,7 @@ var require_object_inspect = __commonJS({
       if (isMap(obj)) {
         var mapParts = [];
         if (mapForEach) {
-          mapForEach.call(obj, function(value, key) {
+          mapForEach.call(obj, function (value, key) {
             mapParts.push(inspect(key, obj, true) + " => " + inspect(value, obj));
           });
         }
@@ -1413,7 +1413,7 @@ var require_object_inspect = __commonJS({
       if (isSet(obj)) {
         var setParts = [];
         if (setForEach) {
-          setForEach.call(obj, function(value) {
+          setForEach.call(obj, function (value) {
             setParts.push(inspect(value, obj));
           });
         }
@@ -1519,7 +1519,7 @@ var require_object_inspect = __commonJS({
       }
       return false;
     }
-    var hasOwn = Object.prototype.hasOwnProperty || function(key) {
+    var hasOwn = Object.prototype.hasOwnProperty || function (key) {
       return key in this;
     };
     function has(obj, key) {
@@ -1755,24 +1755,24 @@ var require_side_channel = __commonJS({
     var $mapGet = callBound("Map.prototype.get", true);
     var $mapSet = callBound("Map.prototype.set", true);
     var $mapHas = callBound("Map.prototype.has", true);
-    var listGetNode = function(list, key) {
+    var listGetNode = function (list, key) {
       var prev = list;
       var curr;
       for (; (curr = prev.next) !== null; prev = curr) {
         if (curr.key === key) {
           prev.next = curr.next;
           curr.next = /** @type {NonNullable<typeof list.next>} */
-          list.next;
+            list.next;
           list.next = curr;
           return curr;
         }
       }
     };
-    var listGet = function(objects, key) {
+    var listGet = function (objects, key) {
       var node = listGetNode(objects, key);
       return node && node.value;
     };
-    var listSet = function(objects, key, value) {
+    var listSet = function (objects, key, value) {
       var node = listGetNode(objects, key);
       if (node) {
         node.value = value;
@@ -1786,7 +1786,7 @@ var require_side_channel = __commonJS({
         };
       }
     };
-    var listHas = function(objects, key) {
+    var listHas = function (objects, key) {
       return !!listGetNode(objects, key);
     };
     module2.exports = function getSideChannel() {
@@ -1794,12 +1794,12 @@ var require_side_channel = __commonJS({
       var $m;
       var $o;
       var channel = {
-        assert: function(key) {
+        assert: function (key) {
           if (!channel.has(key)) {
             throw new $TypeError("Side channel does not contain " + inspect(key));
           }
         },
-        get: function(key) {
+        get: function (key) {
           if ($WeakMap && key && (typeof key === "object" || typeof key === "function")) {
             if ($wm) {
               return $weakMapGet($wm, key);
@@ -1814,7 +1814,7 @@ var require_side_channel = __commonJS({
             }
           }
         },
-        has: function(key) {
+        has: function (key) {
           if ($WeakMap && key && (typeof key === "object" || typeof key === "function")) {
             if ($wm) {
               return $weakMapHas($wm, key);
@@ -1830,7 +1830,7 @@ var require_side_channel = __commonJS({
           }
           return false;
         },
-        set: function(key, value) {
+        set: function (key, value) {
           if ($WeakMap && key && (typeof key === "object" || typeof key === "function")) {
             if (!$wm) {
               $wm = new $WeakMap();
@@ -1862,7 +1862,7 @@ var require_internal_slot = __commonJS({
     var channel = require_side_channel()();
     var $TypeError = require_type();
     var SLOT = {
-      assert: function(O, slot) {
+      assert: function (O, slot) {
         if (!O || typeof O !== "object" && typeof O !== "function") {
           throw new $TypeError("`O` is not an object");
         }
@@ -1874,7 +1874,7 @@ var require_internal_slot = __commonJS({
           throw new $TypeError("`" + slot + "` is not present on `O`");
         }
       },
-      get: function(O, slot) {
+      get: function (O, slot) {
         if (!O || typeof O !== "object" && typeof O !== "function") {
           throw new $TypeError("`O` is not an object");
         }
@@ -1884,7 +1884,7 @@ var require_internal_slot = __commonJS({
         var slots = channel.get(O);
         return slots && slots["$" + slot];
       },
-      has: function(O, slot) {
+      has: function (O, slot) {
         if (!O || typeof O !== "object" && typeof O !== "function") {
           throw new $TypeError("`O` is not an object");
         }
@@ -1894,7 +1894,7 @@ var require_internal_slot = __commonJS({
         var slots = channel.get(O);
         return !!slots && hasOwn(slots, "$" + slot);
       },
-      set: function(O, slot, V) {
+      set: function (O, slot, V) {
         if (!O || typeof O !== "object" && typeof O !== "function") {
           throw new $TypeError("`O` is not an object");
         }
@@ -2023,7 +2023,7 @@ var require_OrdinaryObjectCreate = __commonJS({
         O = new T();
       }
       if (additionalInternalSlotsList.length > 0) {
-        forEach(additionalInternalSlotsList, function(slot) {
+        forEach(additionalInternalSlotsList, function (slot) {
           SLOT.set(O, slot, void 0);
         });
       }
@@ -2126,12 +2126,12 @@ var require_is_callable = __commonJS({
     if (typeof reflectApply === "function" && typeof Object.defineProperty === "function") {
       try {
         badArrayLike = Object.defineProperty({}, "length", {
-          get: function() {
+          get: function () {
             throw isCallableMarker;
           }
         });
         isCallableMarker = {};
-        reflectApply(function() {
+        reflectApply(function () {
           throw 42;
         }, null, badArrayLike);
       } catch (_) {
@@ -2583,7 +2583,7 @@ var require_helpers = __commonJS({
     var Type = require_Type2();
     var $ObjectCreate = GetIntrinsic("%Object.create%", true);
     var hasProto = !({ __proto__: null } instanceof Object);
-    exports.emptyObject = function() {
+    exports.emptyObject = function () {
       if ($ObjectCreate) {
         return $ObjectCreate(null);
       }
@@ -2592,7 +2592,7 @@ var require_helpers = __commonJS({
       }
       return {};
     };
-    exports.emulateES6construct = function(o, defaultNewTarget, defaultProto, slots) {
+    exports.emulateES6construct = function (o, defaultNewTarget, defaultProto, slots) {
       if (Type(o) !== "Object") {
         throw new TypeError("Constructor requires `new`: " + defaultNewTarget.name);
       }
@@ -2601,7 +2601,7 @@ var require_helpers = __commonJS({
         proto = defaultProto;
       }
       var obj = OrdinaryObjectCreate(proto);
-      forEach(entries(slots), function(entry) {
+      forEach(entries(slots), function (entry) {
         var key = entry[0];
         var value = entry[1];
         SLOT.set(obj, key, value);
@@ -2612,7 +2612,7 @@ var require_helpers = __commonJS({
     if (typeof []["@@iterator"] === "function") {
       $iterator$ = "@@iterator";
     }
-    exports.addIterator = function(prototype, impl) {
+    exports.addIterator = function (prototype, impl) {
       var implementation = impl || function iterator() {
         return this;
       };
@@ -2777,7 +2777,7 @@ var require_isFinite = __commonJS({
   "node_modules/es-abstract/helpers/isFinite.js"(exports, module2) {
     "use strict";
     var $isNaN = require_isNaN();
-    module2.exports = function(x) {
+    module2.exports = function (x) {
       return (typeof x === "number" || typeof x === "bigint") && !$isNaN(x) && x !== Infinity && x !== -Infinity;
     };
   }
@@ -2954,11 +2954,11 @@ var require_AsyncFromSyncIteratorContinuation = __commonJS({
       if (!$Promise) {
         throw new $SyntaxError("This environment does not support Promises.");
       }
-      return new $Promise(function(resolve) {
+      return new $Promise(function (resolve) {
         var done = IteratorComplete(result);
         var value = IteratorValue(result);
         var valueWrapper = PromiseResolve($Promise, value);
-        var onFulfilled = function(value2) {
+        var onFulfilled = function (value2) {
           return CreateIterResultObject(value2, done);
         };
         resolve($then(valueWrapper, onFulfilled));
@@ -3071,7 +3071,7 @@ var require_CreateAsyncFromSyncIterator = __commonJS({
         var O = this;
         SLOT.assert(O, "[[SyncIteratorRecord]]");
         var argsLength = arguments.length;
-        return new $Promise(function(resolve) {
+        return new $Promise(function (resolve) {
           var syncIteratorRecord = SLOT.get(O, "[[SyncIteratorRecord]]");
           var result;
           if (argsLength > 0) {
@@ -3082,7 +3082,7 @@ var require_CreateAsyncFromSyncIterator = __commonJS({
           resolve(AsyncFromSyncIteratorContinuation(result));
         });
       },
-      "return": function() {
+      "return": function () {
         if (!$Promise) {
           throw new $SyntaxError("This environment does not support Promises.");
         }
@@ -3090,7 +3090,7 @@ var require_CreateAsyncFromSyncIterator = __commonJS({
         SLOT.assert(O, "[[SyncIteratorRecord]]");
         var valueIsPresent = arguments.length > 0;
         var value = valueIsPresent ? arguments[0] : void 0;
-        return new $Promise(function(resolve, reject) {
+        return new $Promise(function (resolve, reject) {
           var syncIterator = SLOT.get(O, "[[SyncIteratorRecord]]")["[[Iterator]]"];
           var iteratorReturn = GetMethod(syncIterator, "return");
           if (typeof iteratorReturn === "undefined") {
@@ -3111,7 +3111,7 @@ var require_CreateAsyncFromSyncIterator = __commonJS({
           resolve(AsyncFromSyncIteratorContinuation(result));
         });
       },
-      "throw": function() {
+      "throw": function () {
         if (!$Promise) {
           throw new $SyntaxError("This environment does not support Promises.");
         }
@@ -3119,7 +3119,7 @@ var require_CreateAsyncFromSyncIterator = __commonJS({
         SLOT.assert(O, "[[SyncIteratorRecord]]");
         var valueIsPresent = arguments.length > 0;
         var value = valueIsPresent ? arguments[0] : void 0;
-        return new $Promise(function(resolve, reject) {
+        return new $Promise(function (resolve, reject) {
           var syncIterator = SLOT.get(O, "[[SyncIteratorRecord]]")["[[Iterator]]"];
           var throwMethod = GetMethod(syncIterator, "throw");
           if (typeof throwMethod === "undefined") {
@@ -3232,11 +3232,11 @@ var require_getIteratorMethod = __commonJS({
       if (hasSymbols) {
         usingIterator = ES.GetMethod(iterable, $iterator);
       } else if (ES.IsArray(iterable)) {
-        usingIterator = function() {
+        usingIterator = function () {
           var i = -1;
           var arr = this;
           return {
-            next: function() {
+            next: function () {
               i += 1;
               return {
                 done: i >= arr.length,
@@ -3246,10 +3246,10 @@ var require_getIteratorMethod = __commonJS({
           };
         };
       } else if (isString(iterable)) {
-        usingIterator = function() {
+        usingIterator = function () {
           var i = 0;
           return {
-            next: function() {
+            next: function () {
               var nextIndex = ES.AdvanceStringIndex($String(iterable), i, true);
               var value = $stringSlice(iterable, i, nextIndex);
               i = nextIndex;
@@ -3382,7 +3382,7 @@ var require_IteratorClose = __commonJS({
       if (!IsCallable(completion) && !(completion instanceof CompletionRecord)) {
         throw new $TypeError("Assertion failed: completion is not a thunk representing a Completion Record, nor a Completion Record instance");
       }
-      var completionThunk = completion instanceof CompletionRecord ? function() {
+      var completionThunk = completion instanceof CompletionRecord ? function () {
         return completion["?"]();
       } : completion;
       var iterator = iteratorRecord["[[Iterator]]"];
@@ -3548,7 +3548,7 @@ var require_helpers2 = __commonJS({
     var Type = require_Type2();
     var $ObjectCreate = GetIntrinsic("%Object.create%", true);
     var hasProto = !({ __proto__: null } instanceof Object);
-    exports.emptyObject = function() {
+    exports.emptyObject = function () {
       if ($ObjectCreate) {
         return $ObjectCreate(null);
       }
@@ -3557,7 +3557,7 @@ var require_helpers2 = __commonJS({
       }
       return {};
     };
-    exports.emulateES6construct = function(o, defaultNewTarget, defaultProto, slots) {
+    exports.emulateES6construct = function (o, defaultNewTarget, defaultProto, slots) {
       if (Type(o) !== "Object") {
         throw new TypeError("Constructor requires `new`: " + defaultNewTarget.name);
       }
@@ -3566,7 +3566,7 @@ var require_helpers2 = __commonJS({
         proto = defaultProto;
       }
       var obj = OrdinaryObjectCreate(proto);
-      forEach(entries(slots), function(entry) {
+      forEach(entries(slots), function (entry) {
         var key = entry[0];
         var value = entry[1];
         SLOT.set(obj, key, value);
@@ -3577,7 +3577,7 @@ var require_helpers2 = __commonJS({
     if (typeof []["@@iterator"] === "function") {
       $iterator$ = "@@iterator";
     }
-    exports.addIterator = function(prototype, impl) {
+    exports.addIterator = function (prototype, impl) {
       var implementation = impl || function iterator() {
         return this;
       };
@@ -3673,7 +3673,7 @@ var require_is_arguments = __commonJS({
       }
       return value !== null && typeof value === "object" && typeof value.length === "number" && value.length >= 0 && $toString(value) !== "[object Array]" && $toString(value.callee) === "[object Function]";
     };
-    var supportsStandardArguments = function() {
+    var supportsStandardArguments = function () {
       return isStandardArguments(arguments);
     }();
     isStandardArguments.isLegacyArguments = isLegacyArguments;
@@ -3724,7 +3724,7 @@ var require_stop_iteration_iterator = __commonJS({
 var require_isarray = __commonJS({
   "node_modules/isarray/index.js"(exports, module2) {
     var toString = {}.toString;
-    module2.exports = Array.isArray || function(arr) {
+    module2.exports = Array.isArray || function (arr) {
       return toString.call(arr) == "[object Array]";
     };
   }
@@ -3917,7 +3917,7 @@ var require_es_get_iterator = __commonJS({
             }
             if ($mapForEach) {
               var entries = [];
-              $mapForEach(iterable, function(v, k) {
+              $mapForEach(iterable, function (v, k) {
                 $arrayPush(entries, [k, v]);
               });
               return getArrayIterator(entries);
@@ -3932,7 +3932,7 @@ var require_es_get_iterator = __commonJS({
             }
             if ($setForEach) {
               var values = [];
-              $setForEach(iterable, function(v) {
+              $setForEach(iterable, function (v) {
                 $arrayPush(values, v);
               });
               return getArrayIterator(values);
@@ -4017,7 +4017,7 @@ var require_map_helpers = __commonJS({
           map.set(entry[0], entry[1]);
         }
       } else if (isMap(iterable)) {
-        forEach(iterable, function(value, key) {
+        forEach(iterable, function (value, key) {
           map.set(key, value);
         });
       } else {
@@ -4111,7 +4111,7 @@ var require_implementation4 = __commonJS({
       Object.defineProperty(MapShimPrototype, "size", {
         configurable: true,
         enumerable: false,
-        get: function() {
+        get: function () {
           requireMapSlot(this, "size");
           return SLOT.get(this, "[[size]]");
         }
@@ -4211,7 +4211,7 @@ var require_implementation4 = __commonJS({
         SLOT.set(this, "[[size]]", SLOT.get(this, "[[size]]") + 1);
         return this;
       },
-      "delete": function(key) {
+      "delete": function (key) {
         requireMapSlot(this, "delete");
         var head = SLOT.get(this, "[[head]]");
         var i = head;
@@ -4366,7 +4366,7 @@ var require_set_helpers = __commonJS({
     var ensureSet = function ensureSet2(set) {
       if (!SLOT.get(set, "[[setData]]")) {
         var m = new MapShim();
-        iterateStorage(SLOT.get(set, "[[storage]]"), function(fkey) {
+        iterateStorage(SLOT.get(set, "[[storage]]"), function (fkey) {
           var k = decodeKey(fkey);
           m.set(k, k);
         });
@@ -4377,7 +4377,7 @@ var require_set_helpers = __commonJS({
     exports.ensureSet = ensureSet;
     var forEach = function forEach2(set, fn2, context) {
       ensureSet(set);
-      $mapForEach(SLOT.get(set, "[[setData]]"), function(value, key) {
+      $mapForEach(SLOT.get(set, "[[setData]]"), function (value, key) {
         if (typeof context === "undefined") {
           fn2(key, key, set);
         } else {
@@ -4392,7 +4392,7 @@ var require_set_helpers = __commonJS({
           set.add(iterable[i]);
         }
       } else if (isSet(iterable)) {
-        forEach(iterable, function(value) {
+        forEach(iterable, function (value) {
           set.add(value);
         });
       } else {
@@ -4467,12 +4467,12 @@ var require_implementation5 = __commonJS({
       Object.defineProperty(SetShimPrototype, "size", {
         configurable: true,
         enumerable: false,
-        get: function() {
+        get: function () {
           requireSetSlot(this, "size");
           var storage = SLOT.get(this, "[[storage]]");
           if (storage) {
             var size = 0;
-            iterateStorage(storage, function() {
+            iterateStorage(storage, function () {
               size += 1;
             });
             return size;
@@ -4507,7 +4507,7 @@ var require_implementation5 = __commonJS({
         ensureSet(this);
         return SLOT.get(this, "[[setData]]").has(key);
       },
-      "delete": function(key) {
+      "delete": function (key) {
         requireSetSlot(this, "delete");
         var fkey;
         var storage = SLOT.get(this, "[[storage]]");
@@ -4576,7 +4576,7 @@ var require_functions_have_names = __commonJS({
       if (!functionsHaveNames() || !gOPD) {
         return false;
       }
-      var desc = gOPD(function() {
+      var desc = gOPD(function () {
       }, "name");
       return !!desc && !!desc.configurable;
     };
@@ -4594,8 +4594,8 @@ var require_support = __commonJS({
   "node_modules/es-set/lib/support.js"(exports) {
     "use strict";
     var functionsHaveNames = require_functions_have_names();
-    var valueOrFalseIfThrows = function(cb) {
-      return function() {
+    var valueOrFalseIfThrows = function (cb) {
+      return function () {
         try {
           return cb();
         } catch (_) {
@@ -4603,10 +4603,10 @@ var require_support = __commonJS({
         }
       };
     };
-    exports.isGoogleTranslate = function() {
+    exports.isGoogleTranslate = function () {
       return !!Set.prototype["delete"] && Set.prototype.remove && Set.prototype.items && Set.prototype.map && Array.isArray((/* @__PURE__ */ new Set()).keys);
     };
-    exports.setUsesSameValueZero = function() {
+    exports.setUsesSameValueZero = function () {
       if (!Set.prototype["delete"] || !Set.prototype.add || !Set.prototype.has) {
         return false;
       }
@@ -4621,11 +4621,11 @@ var require_support = __commonJS({
       s.add(0);
       return s.has(-0);
     };
-    exports.setSupportsChaining = function() {
+    exports.setSupportsChaining = function () {
       var testSet = /* @__PURE__ */ new Set();
       return testSet.add(1) === testSet;
     };
-    var setSupportsSubclassing = valueOrFalseIfThrows(function() {
+    var setSupportsSubclassing = valueOrFalseIfThrows(function () {
       if (!Object.setPrototypeOf) {
         return true;
       }
@@ -4640,26 +4640,26 @@ var require_support = __commonJS({
       s.add(1, 2);
       return s instanceof Sub;
     });
-    var setRequiresNew = function() {
+    var setRequiresNew = function () {
       try {
         return !(Set() instanceof Set);
       } catch (e) {
         return e instanceof TypeError;
       }
     };
-    exports.setCompliantConstructor = function() {
+    exports.setCompliantConstructor = function () {
       return Set.length === 0 && setSupportsSubclassing() && setRequiresNew();
     };
-    exports.setKeysIsValues = function() {
+    exports.setKeysIsValues = function () {
       return Set.prototype.keys === Set.prototype.values;
     };
-    exports.setHasCorrectName = function() {
+    exports.setHasCorrectName = function () {
       if (!functionsHaveNames) {
         return true;
       }
       return Set.prototype.has.name === "has";
     };
-    exports.setHasOldFirefoxInterface = function() {
+    exports.setHasOldFirefoxInterface = function () {
       return (/* @__PURE__ */ new Set()).size !== 0 || typeof Set.prototype.values !== "function" || typeof Set.prototype.forEach !== "function";
     };
   }
@@ -4702,9 +4702,11 @@ var require_polyfill2 = __commonJS({
           define(
             SetShim.prototype,
             { constructor: SetShim },
-            { constructor: function() {
-              return true;
-            } }
+            {
+              constructor: function () {
+                return true;
+              }
+            }
           );
         }
         return SetShim;
@@ -5013,7 +5015,7 @@ var require_is_regex = __commonJS({
       has = callBound("Object.prototype.hasOwnProperty");
       $exec = callBound("RegExp.prototype.exec");
       isRegexMarker = {};
-      throwRegexMarker = function() {
+      throwRegexMarker = function () {
         throw isRegexMarker;
       };
       badStringifier = {
@@ -5496,7 +5498,7 @@ var require_tools = __commonJS({
     var iterate = require_iterate_value();
     var $nativeSetForEach = callBound("Set.prototype.forEach", true);
     var $polyfillSetForEach = callBind($Set.prototype.forEach);
-    var forEach = function(set, callback) {
+    var forEach = function (set, callback) {
       if ($nativeSetForEach) {
         try {
           return $nativeSetForEach(set, callback);
@@ -5512,7 +5514,7 @@ var require_tools = __commonJS({
     };
     var $nativeSetAdd = callBound("Set.prototype.add", true);
     var $polyfillSetAdd = $Set.prototype.add && callBind($Set.prototype.add);
-    var add = function(S, v) {
+    var add = function (S, v) {
       if ($nativeSetAdd) {
         try {
           return $nativeSetAdd(S, v);
@@ -5523,7 +5525,7 @@ var require_tools = __commonJS({
     };
     var $nativeSetHas = callBound("Set.prototype.has", true);
     var $polyfillSetHas = callBind($Set.prototype.has);
-    var has = function(set, key) {
+    var has = function (set, key) {
       if ($nativeSetHas) {
         try {
           return $nativeSetHas(set, key);
@@ -5534,7 +5536,7 @@ var require_tools = __commonJS({
     };
     var $nativeSetDelete = callBound("Set.prototype.delete", true);
     var $polyfillSetDelete = callBind($Set.prototype["delete"]);
-    var setDelete = function(set, key) {
+    var setDelete = function (set, key) {
       if ($nativeSetDelete) {
         try {
           return $nativeSetDelete(set, key);
@@ -5547,12 +5549,12 @@ var require_tools = __commonJS({
     var $polyfillSetSize = gOPD ? callBind(gOPD($Set.prototype, "size").get) : null;
     var legacySetSize = function setSize(set) {
       var count = 0;
-      forEach(set, function() {
+      forEach(set, function () {
         count += 1;
       });
       return count;
     };
-    var size = function(S) {
+    var size = function (S) {
       if ($nativeSetSize) {
         try {
           return $nativeSetSize(S);
@@ -5607,7 +5609,7 @@ var require_implementation7 = __commonJS({
       var thisSize = $setSize(O);
       var result = new $Set();
       if (thisSize <= otherRec["[[Size]]"]) {
-        $setForEach(O, function(e) {
+        $setForEach(O, function (e) {
           var inOther = ToBoolean(Call(otherRec["[[Has]]"], otherRec["[[Set]]"], [e]));
           if (!inOther) {
             $setAdd(result, e);
@@ -5616,7 +5618,7 @@ var require_implementation7 = __commonJS({
       } else {
         var keysIter = GetIteratorFromMethod(otherRec["[[Set]]"], otherRec["[[Keys]]"]);
         var resultSetData = [];
-        $setForEach(O, function(e) {
+        $setForEach(O, function (e) {
           $push(resultSetData, e);
         });
         var next;
@@ -5633,7 +5635,7 @@ var require_implementation7 = __commonJS({
             }
           }
         }
-        forEach(resultSetData, function(e) {
+        forEach(resultSetData, function (e) {
           if (e !== deleted) {
             $setAdd(result, e);
           }
@@ -5719,7 +5721,7 @@ var require_globalthis = __commonJS({
     var getPolyfill = require_polyfill5();
     var shim = require_shim3();
     var polyfill = getPolyfill();
-    var getGlobal = function() {
+    var getGlobal = function () {
       return polyfill;
     };
     defineProperties(getGlobal, {
@@ -5745,10 +5747,10 @@ var require_shim4 = __commonJS({
     var getPolyfill = require_polyfill2();
     var support = require_support();
     var addIterator = require_helpers().addIterator;
-    var force = function() {
+    var force = function () {
       return true;
     };
-    var replaceGlobal = function(SetShim) {
+    var replaceGlobal = function (SetShim) {
       define(globalThis2, { Set: SetShim }, { Set: force });
       return SetShim;
     };
@@ -5870,9 +5872,11 @@ var require_shim5 = __commonJS({
       define(
         Set.prototype,
         { difference: polyfill },
-        { difference: function() {
-          return Set.prototype.difference !== polyfill;
-        } }
+        {
+          difference: function () {
+            return Set.prototype.difference !== polyfill;
+          }
+        }
       );
       return polyfill;
     };
@@ -5972,7 +5976,7 @@ var require_SetDataHas = __commonJS({
       if (!IsArray(setData)) {
         throw new $TypeError("`setData` must be a List");
       }
-      return some(setData, function(e) {
+      return some(setData, function (e) {
         return SameValueZero(e, value);
       });
     };
@@ -6011,7 +6015,7 @@ var require_implementation8 = __commonJS({
       var thisSize = $setSize(O);
       if (thisSize <= otherRec["[[Size]]"]) {
         var index = 0;
-        $setForEach(O, function(e) {
+        $setForEach(O, function (e) {
           if (index < thisSize) {
             index += 1;
             var inOther = ToBoolean(Call(otherRec["[[Has]]"], otherRec["[[Set]]"], [e]));
@@ -6042,7 +6046,7 @@ var require_implementation8 = __commonJS({
         }
       }
       var result = new $Set();
-      forEach(resultSetData, function(e) {
+      forEach(resultSetData, function (e) {
         $setAdd(result, e);
       });
       return result;
@@ -6075,9 +6079,11 @@ var require_shim6 = __commonJS({
       define(
         Set.prototype,
         { intersection: polyfill },
-        { intersection: function() {
-          return Set.prototype.intersection !== polyfill;
-        } }
+        {
+          intersection: function () {
+            return Set.prototype.intersection !== polyfill;
+          }
+        }
       );
       return polyfill;
     };
@@ -6452,7 +6458,7 @@ var _mkUriSafe = (src) => src.replace(/=/g, "").replace(/[+\/]/g, (m0) => m0 == 
 var btoaPolyfill = (bin) => {
   let u32, c0, c1, c2, asc = "";
   const pad = bin.length % 3;
-  for (let i = 0; i < bin.length; ) {
+  for (let i = 0; i < bin.length;) {
     if ((c0 = bin.charCodeAt(i++)) > 255 || (c1 = bin.charCodeAt(i++)) > 255 || (c2 = bin.charCodeAt(i++)) > 255)
       throw new TypeError("invalid character found");
     u32 = c0 << 16 | c1 << 8 | c2;
@@ -7074,7 +7080,7 @@ function processLatexSuiteSettings(snippets2, settings) {
     let envs = [];
     try {
       const envsJSON = JSON.parse(envsStr);
-      envs = envsJSON.map(function(env) {
+      envs = envsJSON.map(function (env) {
         return { openSymbol: env[0], closeSymbol: env[1] };
       });
     } catch (e) {
@@ -7113,10 +7119,10 @@ var clippingParents = "clippingParents";
 var viewport = "viewport";
 var popper = "popper";
 var reference = "reference";
-var variationPlacements = /* @__PURE__ */ basePlacements.reduce(function(acc, placement) {
+var variationPlacements = /* @__PURE__ */ basePlacements.reduce(function (acc, placement) {
   return acc.concat([placement + "-" + start, placement + "-" + end]);
 }, []);
-var placements = /* @__PURE__ */ [].concat(basePlacements, [auto]).reduce(function(acc, placement) {
+var placements = /* @__PURE__ */[].concat(basePlacements, [auto]).reduce(function (acc, placement) {
   return acc.concat([placement, placement + "-" + start, placement + "-" + end]);
 }, []);
 var beforeRead = "beforeRead";
@@ -7167,7 +7173,7 @@ function isShadowRoot(node) {
 // node_modules/@popperjs/core/lib/modifiers/applyStyles.js
 function applyStyles(_ref) {
   var state = _ref.state;
-  Object.keys(state.elements).forEach(function(name) {
+  Object.keys(state.elements).forEach(function (name) {
     var style = state.styles[name] || {};
     var attributes = state.attributes[name] || {};
     var element = state.elements[name];
@@ -7175,7 +7181,7 @@ function applyStyles(_ref) {
       return;
     }
     Object.assign(element.style, style);
-    Object.keys(attributes).forEach(function(name2) {
+    Object.keys(attributes).forEach(function (name2) {
       var value = attributes[name2];
       if (value === false) {
         element.removeAttribute(name2);
@@ -7204,12 +7210,12 @@ function effect(_ref2) {
   if (state.elements.arrow) {
     Object.assign(state.elements.arrow.style, initialStyles.arrow);
   }
-  return function() {
-    Object.keys(state.elements).forEach(function(name) {
+  return function () {
+    Object.keys(state.elements).forEach(function (name) {
       var element = state.elements[name];
       var attributes = state.attributes[name] || {};
       var styleProperties = Object.keys(state.styles.hasOwnProperty(name) ? state.styles[name] : initialStyles[name]);
-      var style = styleProperties.reduce(function(style2, property) {
+      var style = styleProperties.reduce(function (style2, property) {
         style2[property] = "";
         return style2;
       }, {});
@@ -7217,7 +7223,7 @@ function effect(_ref2) {
         return;
       }
       Object.assign(element.style, style);
-      Object.keys(attributes).forEach(function(attribute) {
+      Object.keys(attributes).forEach(function (attribute) {
         element.removeAttribute(attribute);
       });
     });
@@ -7346,7 +7352,7 @@ function getParentNode(element) {
 // node_modules/@popperjs/core/lib/dom-utils/getOffsetParent.js
 function getTrueOffsetParent(element) {
   if (!isHTMLElement(element) || // https://github.com/popperjs/popper-core/issues/837
-  getComputedStyle(element).position === "fixed") {
+    getComputedStyle(element).position === "fixed") {
     return null;
   }
   return element.offsetParent;
@@ -7417,7 +7423,7 @@ function mergePaddingObject(paddingObject) {
 
 // node_modules/@popperjs/core/lib/utils/expandToHashMap.js
 function expandToHashMap(value, keys) {
-  return keys.reduce(function(hashMap, key) {
+  return keys.reduce(function (hashMap, key) {
     hashMap[key] = value;
     return hashMap;
   }, {});
@@ -7586,7 +7592,7 @@ function computeStyles(_ref5) {
   var _options$gpuAccelerat = options.gpuAcceleration, gpuAcceleration = _options$gpuAccelerat === void 0 ? true : _options$gpuAccelerat, _options$adaptive = options.adaptive, adaptive = _options$adaptive === void 0 ? true : _options$adaptive, _options$roundOffsets = options.roundOffsets, roundOffsets = _options$roundOffsets === void 0 ? true : _options$roundOffsets;
   if (true) {
     var transitionProperty = getComputedStyle(state.elements.popper).transitionProperty || "";
-    if (adaptive && ["transform", "top", "right", "bottom", "left"].some(function(property) {
+    if (adaptive && ["transform", "top", "right", "bottom", "left"].some(function (property) {
       return transitionProperty.indexOf(property) >= 0;
     })) {
       console.warn(["Popper: Detected CSS transitions on at least one of the following", 'CSS properties: "transform", "top", "right", "bottom", "left".', "\n\n", 'Disable the "computeStyles" modifier\'s `adaptive` option to allow', "for smooth transitions, or remove these properties from the CSS", "transition declaration on the popper element if only transitioning", "opacity or background-color for example.", "\n\n", "We recommend using the popper element as a wrapper around an inner", "element that can have any CSS property transitioned for animations."].join(" "));
@@ -7638,16 +7644,16 @@ function effect3(_ref) {
   var window2 = getWindow(state.elements.popper);
   var scrollParents = [].concat(state.scrollParents.reference, state.scrollParents.popper);
   if (scroll) {
-    scrollParents.forEach(function(scrollParent) {
+    scrollParents.forEach(function (scrollParent) {
       scrollParent.addEventListener("scroll", instance2.update, passive);
     });
   }
   if (resize) {
     window2.addEventListener("resize", instance2.update, passive);
   }
-  return function() {
+  return function () {
     if (scroll) {
-      scrollParents.forEach(function(scrollParent) {
+      scrollParents.forEach(function (scrollParent) {
         scrollParent.removeEventListener("scroll", instance2.update, passive);
       });
     }
@@ -7674,7 +7680,7 @@ var hash = {
   top: "bottom"
 };
 function getOppositePlacement(placement) {
-  return placement.replace(/left|right|bottom|top/g, function(matched) {
+  return placement.replace(/left|right|bottom|top/g, function (matched) {
     return hash[matched];
   });
 }
@@ -7685,7 +7691,7 @@ var hash2 = {
   end: "start"
 };
 function getOppositeVariationPlacement(placement) {
-  return placement.replace(/start|end/g, function(matched) {
+  return placement.replace(/start|end/g, function (matched) {
     return hash2[matched];
   });
 }
@@ -7819,7 +7825,7 @@ function getClippingParents(element) {
   if (!isElement(clipperElement)) {
     return [];
   }
-  return clippingParents2.filter(function(clippingParent) {
+  return clippingParents2.filter(function (clippingParent) {
     return isElement(clippingParent) && contains(clippingParent, clipperElement) && getNodeName(clippingParent) !== "body";
   });
 }
@@ -7827,7 +7833,7 @@ function getClippingRect(element, boundary, rootBoundary) {
   var mainClippingParents = boundary === "clippingParents" ? getClippingParents(element) : [].concat(boundary);
   var clippingParents2 = [].concat(mainClippingParents, [rootBoundary]);
   var firstClippingParent = clippingParents2[0];
-  var clippingRect = clippingParents2.reduce(function(accRect, clippingParent) {
+  var clippingRect = clippingParents2.reduce(function (accRect, clippingParent) {
     var rect = getClientRectFromMixedType(element, clippingParent);
     accRect.top = max(rect.top, accRect.top);
     accRect.right = min(rect.right, accRect.right);
@@ -7926,7 +7932,7 @@ function detectOverflow(state, options) {
   var offsetData = state.modifiersData.offset;
   if (elementContext === popper && offsetData) {
     var offset2 = offsetData[placement];
-    Object.keys(overflowOffsets).forEach(function(key) {
+    Object.keys(overflowOffsets).forEach(function (key) {
       var multiply = [right, bottom].indexOf(key) >= 0 ? 1 : -1;
       var axis = [top, bottom].indexOf(key) >= 0 ? "y" : "x";
       overflowOffsets[key] += offset2[axis] * multiply;
@@ -7942,10 +7948,10 @@ function computeAutoPlacement(state, options) {
   }
   var _options = options, placement = _options.placement, boundary = _options.boundary, rootBoundary = _options.rootBoundary, padding = _options.padding, flipVariations = _options.flipVariations, _options$allowedAutoP = _options.allowedAutoPlacements, allowedAutoPlacements = _options$allowedAutoP === void 0 ? placements : _options$allowedAutoP;
   var variation = getVariation(placement);
-  var placements2 = variation ? flipVariations ? variationPlacements : variationPlacements.filter(function(placement2) {
+  var placements2 = variation ? flipVariations ? variationPlacements : variationPlacements.filter(function (placement2) {
     return getVariation(placement2) === variation;
   }) : basePlacements;
-  var allowedPlacements = placements2.filter(function(placement2) {
+  var allowedPlacements = placements2.filter(function (placement2) {
     return allowedAutoPlacements.indexOf(placement2) >= 0;
   });
   if (allowedPlacements.length === 0) {
@@ -7954,7 +7960,7 @@ function computeAutoPlacement(state, options) {
       console.error(["Popper: The `allowedAutoPlacements` option did not allow any", "placements. Ensure the `placement` option matches the variation", "of the allowed placements.", 'For example, "auto" cannot be used to allow "bottom-start".', 'Use "auto-start" instead.'].join(" "));
     }
   }
-  var overflows = allowedPlacements.reduce(function(acc, placement2) {
+  var overflows = allowedPlacements.reduce(function (acc, placement2) {
     acc[placement2] = detectOverflow(state, {
       placement: placement2,
       boundary,
@@ -7963,7 +7969,7 @@ function computeAutoPlacement(state, options) {
     })[getBasePlacement(placement2)];
     return acc;
   }, {});
-  return Object.keys(overflows).sort(function(a, b) {
+  return Object.keys(overflows).sort(function (a, b) {
     return overflows[a] - overflows[b];
   });
 }
@@ -7986,7 +7992,7 @@ function flip(_ref) {
   var basePlacement = getBasePlacement(preferredPlacement);
   var isBasePlacement = basePlacement === preferredPlacement;
   var fallbackPlacements = specifiedFallbackPlacements || (isBasePlacement || !flipVariations ? [getOppositePlacement(preferredPlacement)] : getExpandedFallbackPlacements(preferredPlacement));
-  var placements2 = [preferredPlacement].concat(fallbackPlacements).reduce(function(acc, placement2) {
+  var placements2 = [preferredPlacement].concat(fallbackPlacements).reduce(function (acc, placement2) {
     return acc.concat(getBasePlacement(placement2) === auto ? computeAutoPlacement(state, {
       placement: placement2,
       boundary,
@@ -8026,7 +8032,7 @@ function flip(_ref) {
     if (checkAltAxis) {
       checks.push(overflow[mainVariationSide] <= 0, overflow[altVariationSide] <= 0);
     }
-    if (checks.every(function(check) {
+    if (checks.every(function (check) {
       return check;
     })) {
       firstFittingPlacement = placement;
@@ -8038,10 +8044,10 @@ function flip(_ref) {
   if (makeFallbackChecks) {
     var numberOfChecks = flipVariations ? 3 : 1;
     var _loop = function _loop2(_i2) {
-      var fittingPlacement = placements2.find(function(placement2) {
+      var fittingPlacement = placements2.find(function (placement2) {
         var checks2 = checksMap.get(placement2);
         if (checks2) {
-          return checks2.slice(0, _i2).every(function(check) {
+          return checks2.slice(0, _i2).every(function (check) {
             return check;
           });
         }
@@ -8090,7 +8096,7 @@ function getSideOffsets(overflow, rect, preventedOffsets) {
   };
 }
 function isAnySideFullyClipped(overflow) {
-  return [top, right, bottom, left].some(function(side) {
+  return [top, right, bottom, left].some(function (side) {
     return overflow[side] >= 0;
   });
 }
@@ -8148,7 +8154,7 @@ function distanceAndSkiddingToXY(placement, rects, offset2) {
 function offset(_ref2) {
   var state = _ref2.state, options = _ref2.options, name = _ref2.name;
   var _options$offset = options.offset, offset2 = _options$offset === void 0 ? [0, 0] : _options$offset;
-  var data = placements.reduce(function(acc, placement) {
+  var data = placements.reduce(function (acc, placement) {
     acc[placement] = distanceAndSkiddingToXY(placement, state.rects, offset2);
     return acc;
   }, {});
@@ -8325,7 +8331,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
   };
   if (isOffsetParentAnElement || !isOffsetParentAnElement && !isFixed) {
     if (getNodeName(offsetParent) !== "body" || // https://github.com/popperjs/popper-core/issues/1078
-    isScrollParent(documentElement)) {
+      isScrollParent(documentElement)) {
       scroll = getNodeScroll(offsetParent);
     }
     if (isHTMLElement(offsetParent)) {
@@ -8349,13 +8355,13 @@ function order(modifiers) {
   var map = /* @__PURE__ */ new Map();
   var visited = /* @__PURE__ */ new Set();
   var result = [];
-  modifiers.forEach(function(modifier) {
+  modifiers.forEach(function (modifier) {
     map.set(modifier.name, modifier);
   });
   function sort(modifier) {
     visited.add(modifier.name);
     var requires = [].concat(modifier.requires || [], modifier.requiresIfExists || []);
-    requires.forEach(function(dep) {
+    requires.forEach(function (dep) {
       if (!visited.has(dep)) {
         var depModifier = map.get(dep);
         if (depModifier) {
@@ -8365,7 +8371,7 @@ function order(modifiers) {
     });
     result.push(modifier);
   }
-  modifiers.forEach(function(modifier) {
+  modifiers.forEach(function (modifier) {
     if (!visited.has(modifier.name)) {
       sort(modifier);
     }
@@ -8374,8 +8380,8 @@ function order(modifiers) {
 }
 function orderModifiers(modifiers) {
   var orderedModifiers = order(modifiers);
-  return modifierPhases.reduce(function(acc, phase) {
-    return acc.concat(orderedModifiers.filter(function(modifier) {
+  return modifierPhases.reduce(function (acc, phase) {
+    return acc.concat(orderedModifiers.filter(function (modifier) {
       return modifier.phase === phase;
     }));
   }, []);
@@ -8384,10 +8390,10 @@ function orderModifiers(modifiers) {
 // node_modules/@popperjs/core/lib/utils/debounce.js
 function debounce2(fn2) {
   var pending;
-  return function() {
+  return function () {
     if (!pending) {
-      pending = new Promise(function(resolve) {
-        Promise.resolve().then(function() {
+      pending = new Promise(function (resolve) {
+        Promise.resolve().then(function () {
           pending = void 0;
           resolve(fn2());
         });
@@ -8402,7 +8408,7 @@ function format(str) {
   for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
     args[_key - 1] = arguments[_key];
   }
-  return [].concat(args).reduce(function(p, c) {
+  return [].concat(args).reduce(function (p, c) {
     return p.replace(/%s/, c);
   }, str);
 }
@@ -8412,10 +8418,10 @@ var INVALID_MODIFIER_ERROR = 'Popper: modifier "%s" provided an invalid %s prope
 var MISSING_DEPENDENCY_ERROR = 'Popper: modifier "%s" requires "%s", but "%s" modifier is not available';
 var VALID_PROPERTIES = ["name", "enabled", "phase", "fn", "effect", "requires", "options"];
 function validateModifiers(modifiers) {
-  modifiers.forEach(function(modifier) {
-    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function(value, index, self2) {
+  modifiers.forEach(function (modifier) {
+    [].concat(Object.keys(modifier), VALID_PROPERTIES).filter(function (value, index, self2) {
       return self2.indexOf(value) === index;
-    }).forEach(function(key) {
+    }).forEach(function (key) {
       switch (key) {
         case "name":
           if (typeof modifier.name !== "string") {
@@ -8456,12 +8462,12 @@ function validateModifiers(modifiers) {
         case "data":
           break;
         default:
-          console.error('PopperJS: an invalid property has been provided to the "' + modifier.name + '" modifier, valid properties are ' + VALID_PROPERTIES.map(function(s) {
+          console.error('PopperJS: an invalid property has been provided to the "' + modifier.name + '" modifier, valid properties are ' + VALID_PROPERTIES.map(function (s) {
             return '"' + s + '"';
           }).join(", ") + '; but "' + key + '" was provided.');
       }
-      modifier.requires && modifier.requires.forEach(function(requirement) {
-        if (modifiers.find(function(mod) {
+      modifier.requires && modifier.requires.forEach(function (requirement) {
+        if (modifiers.find(function (mod) {
           return mod.name === requirement;
         }) == null) {
           console.error(format(MISSING_DEPENDENCY_ERROR, String(modifier.name), requirement, requirement));
@@ -8474,7 +8480,7 @@ function validateModifiers(modifiers) {
 // node_modules/@popperjs/core/lib/utils/uniqueBy.js
 function uniqueBy(arr, fn2) {
   var identifiers = /* @__PURE__ */ new Set();
-  return arr.filter(function(item) {
+  return arr.filter(function (item) {
     var identifier = fn2(item);
     if (!identifiers.has(identifier)) {
       identifiers.add(identifier);
@@ -8485,7 +8491,7 @@ function uniqueBy(arr, fn2) {
 
 // node_modules/@popperjs/core/lib/utils/mergeByName.js
 function mergeByName(modifiers) {
-  var merged = modifiers.reduce(function(merged2, current) {
+  var merged = modifiers.reduce(function (merged2, current) {
     var existing = merged2[current.name];
     merged2[current.name] = existing ? Object.assign({}, existing, current, {
       options: Object.assign({}, existing.options, current.options),
@@ -8493,7 +8499,7 @@ function mergeByName(modifiers) {
     }) : current;
     return merged2;
   }, {});
-  return Object.keys(merged).map(function(key) {
+  return Object.keys(merged).map(function (key) {
     return merged[key];
   });
 }
@@ -8510,7 +8516,7 @@ function areValidElements() {
   for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
     args[_key] = arguments[_key];
   }
-  return !args.some(function(element) {
+  return !args.some(function (element) {
     return !(element && typeof element.getBoundingClientRect === "function");
   });
 }
@@ -8548,17 +8554,17 @@ function popperGenerator(generatorOptions) {
           popper: listScrollParents(popper2)
         };
         var orderedModifiers = orderModifiers(mergeByName([].concat(defaultModifiers2, state.options.modifiers)));
-        state.orderedModifiers = orderedModifiers.filter(function(m) {
+        state.orderedModifiers = orderedModifiers.filter(function (m) {
           return m.enabled;
         });
         if (true) {
-          var modifiers = uniqueBy([].concat(orderedModifiers, state.options.modifiers), function(_ref) {
+          var modifiers = uniqueBy([].concat(orderedModifiers, state.options.modifiers), function (_ref) {
             var name = _ref.name;
             return name;
           });
           validateModifiers(modifiers);
           if (getBasePlacement(state.options.placement) === auto) {
-            var flipModifier = state.orderedModifiers.find(function(_ref2) {
+            var flipModifier = state.orderedModifiers.find(function (_ref2) {
               var name = _ref2.name;
               return name === "flip";
             });
@@ -8567,7 +8573,7 @@ function popperGenerator(generatorOptions) {
             }
           }
           var _getComputedStyle = getComputedStyle(popper2), marginTop = _getComputedStyle.marginTop, marginRight = _getComputedStyle.marginRight, marginBottom = _getComputedStyle.marginBottom, marginLeft = _getComputedStyle.marginLeft;
-          if ([marginTop, marginRight, marginBottom, marginLeft].some(function(margin) {
+          if ([marginTop, marginRight, marginBottom, marginLeft].some(function (margin) {
             return parseFloat(margin);
           })) {
             console.warn(['Popper: CSS "margin" styles cannot be used to apply padding', "between the popper and its reference element or boundary.", "To replicate margin, use the `offset` modifier, as well as", "the `padding` option in the `preventOverflow` and `flip`", "modifiers."].join(" "));
@@ -8598,7 +8604,7 @@ function popperGenerator(generatorOptions) {
         };
         state.reset = false;
         state.placement = state.options.placement;
-        state.orderedModifiers.forEach(function(modifier) {
+        state.orderedModifiers.forEach(function (modifier) {
           return state.modifiersData[modifier.name] = Object.assign({}, modifier.data);
         });
         var __debug_loops__ = 0;
@@ -8628,8 +8634,8 @@ function popperGenerator(generatorOptions) {
       },
       // Async and optimistically optimized update – it will not be executed if
       // not necessary (debounced to run at most once-per-tick)
-      update: debounce2(function() {
-        return new Promise(function(resolve) {
+      update: debounce2(function () {
+        return new Promise(function (resolve) {
           instance2.forceUpdate();
           resolve(state);
         });
@@ -8645,13 +8651,13 @@ function popperGenerator(generatorOptions) {
       }
       return instance2;
     }
-    instance2.setOptions(options).then(function(state2) {
+    instance2.setOptions(options).then(function (state2) {
       if (!isDestroyed && options.onFirstUpdate) {
         options.onFirstUpdate(state2);
       }
     });
     function runModifierEffects() {
-      state.orderedModifiers.forEach(function(_ref3) {
+      state.orderedModifiers.forEach(function (_ref3) {
         var name = _ref3.name, _ref3$options = _ref3.options, options2 = _ref3$options === void 0 ? {} : _ref3$options, effect4 = _ref3.effect;
         if (typeof effect4 === "function") {
           var cleanupFn = effect4({
@@ -8667,7 +8673,7 @@ function popperGenerator(generatorOptions) {
       });
     }
     function cleanupModifierEffects() {
-      effectCleanupFns.forEach(function(fn2) {
+      effectCleanupFns.forEach(function (fn2) {
         return fn2();
       });
       effectCleanupFns = [];
@@ -9036,7 +9042,7 @@ var NodeSet = class _NodeSet {
 var CachedNode = /* @__PURE__ */ new WeakMap();
 var CachedInnerNode = /* @__PURE__ */ new WeakMap();
 var IterMode;
-(function(IterMode2) {
+(function (IterMode2) {
   IterMode2[IterMode2["ExcludeBuffers"] = 1] = "ExcludeBuffers";
   IterMode2[IterMode2["IncludeAnonymous"] = 2] = "IncludeAnonymous";
   IterMode2[IterMode2["IgnoreMounts"] = 4] = "IgnoreMounts";
@@ -9151,14 +9157,14 @@ var Tree = class _Tree {
   iterate(spec) {
     let { enter, leave, from = 0, to = this.length } = spec;
     let mode = spec.mode || 0, anon = (mode & IterMode.IncludeAnonymous) > 0;
-    for (let c = this.cursor(mode | IterMode.IncludeAnonymous); ; ) {
+    for (let c = this.cursor(mode | IterMode.IncludeAnonymous); ;) {
       let entered = false;
       if (c.from <= to && c.to >= from && (!anon && c.type.isAnonymous || enter(c) !== false)) {
         if (c.firstChild())
           continue;
         entered = true;
       }
-      for (; ; ) {
+      for (; ;) {
         if (entered && leave && (anon || !c.type.isAnonymous))
           leave(c);
         if (c.nextSibling())
@@ -9252,7 +9258,7 @@ var TreeBuffer = class _TreeBuffer {
   */
   toString() {
     let result = [];
-    for (let index = 0; index < this.buffer.length; ) {
+    for (let index = 0; index < this.buffer.length;) {
       result.push(this.childString(index));
       index = this.buffer[index + 3];
     }
@@ -9296,7 +9302,7 @@ var TreeBuffer = class _TreeBuffer {
   slice(startI, endI, from) {
     let b = this.buffer;
     let copy = new Uint16Array(endI - startI), len = 0;
-    for (let i = startI, j = 0; i < endI; ) {
+    for (let i = startI, j = 0; i < endI;) {
       copy[j++] = b[i++];
       copy[j++] = b[i++] - from;
       let to = copy[j++] = b[i++] - from;
@@ -9336,7 +9342,7 @@ function resolveNode(node, pos, side, overlays) {
       if (scan instanceof TreeNode && scan.index < 0 && ((_a = parent.enter(pos, side, mode)) === null || _a === void 0 ? void 0 : _a.from) != scan.from)
         node = parent;
     }
-  for (; ; ) {
+  for (; ;) {
     let inner = node.enter(pos, side, mode);
     if (!inner)
       return node;
@@ -9403,7 +9409,7 @@ var TreeNode = class _TreeNode extends BaseNode {
     return this.from + this._tree.length;
   }
   nextChild(i, dir, pos, side, mode = 0) {
-    for (let parent = this; ; ) {
+    for (let parent = this; ;) {
       for (let { children, positions } = parent._tree, e = dir > 0 ? children.length : -1; i != e; i += dir) {
         let next = children[i], start2 = positions[i] + parent.from;
         if (!checkSide(side, pos, start2, start2 + next.length))
@@ -9529,7 +9535,7 @@ function getChildren(node, type, before, after) {
       if (!cur.nextSibling())
         return result;
   }
-  for (; ; ) {
+  for (; ;) {
     if (after != null && cur.type.is(after))
       return result;
     if (cur.type.is(type))
@@ -9932,7 +9938,7 @@ var TreeCursor = class {
       /* Side.DontCare */
     ))
       return true;
-    for (; ; ) {
+    for (; ;) {
       if (this.sibling(dir))
         return true;
       if (this.atLastNode(dir) || !this.parent())
@@ -9981,17 +9987,17 @@ var TreeCursor = class {
     let cache2 = this.bufferNode, result = null, depth = 0;
     if (cache2 && cache2.context == this.buffer) {
       scan:
-        for (let index = this.index, d = this.stack.length; d >= 0; ) {
-          for (let c = cache2; c; c = c._parent)
-            if (c.index == index) {
-              if (index == this.index)
-                return c;
-              result = c;
-              depth = d + 1;
-              break scan;
-            }
-          index = this.stack[--d];
-        }
+      for (let index = this.index, d = this.stack.length; d >= 0;) {
+        for (let c = cache2; c; c = c._parent)
+          if (c.index == index) {
+            if (index == this.index)
+              return c;
+            result = c;
+            depth = d + 1;
+            break scan;
+          }
+        index = this.stack[--d];
+      }
     }
     for (let i = depth; i < this.stack.length; i++)
       result = new BufferNode(this.buffer, result, this.stack[i]);
@@ -10012,7 +10018,7 @@ var TreeCursor = class {
   skipped, and `leave` isn't called for it.
   */
   iterate(enter, leave) {
-    for (let depth = 0; ; ) {
+    for (let depth = 0; ;) {
       let mustLeave = false;
       if (this.type.isAnonymous || enter(this) !== false) {
         if (this.firstChild()) {
@@ -10022,7 +10028,7 @@ var TreeCursor = class {
         if (!this.type.isAnonymous)
           mustLeave = true;
       }
-      for (; ; ) {
+      for (; ;) {
         if (mustLeave && leave)
           leave(this);
         mustLeave = this.type.isAnonymous;
@@ -10165,38 +10171,38 @@ function buildTree(data) {
     let size = 0, start2 = 0, skip = 0, minStart = fork.end - maxBufferLength;
     let result = { size: 0, start: 0, skip: 0 };
     scan:
-      for (let minPos = fork.pos - maxSize; fork.pos > minPos; ) {
-        let nodeSize2 = fork.size;
-        if (fork.id == inRepeat && nodeSize2 >= 0) {
-          result.size = size;
-          result.start = start2;
-          result.skip = skip;
-          skip += 4;
-          size += 4;
-          fork.next();
-          continue;
-        }
-        let startPos = fork.pos - nodeSize2;
-        if (nodeSize2 < 0 || startPos < minPos || fork.start < minStart)
-          break;
-        let localSkipped = fork.id >= minRepeatType ? 4 : 0;
-        let nodeStart = fork.start;
+    for (let minPos = fork.pos - maxSize; fork.pos > minPos;) {
+      let nodeSize2 = fork.size;
+      if (fork.id == inRepeat && nodeSize2 >= 0) {
+        result.size = size;
+        result.start = start2;
+        result.skip = skip;
+        skip += 4;
+        size += 4;
         fork.next();
-        while (fork.pos > startPos) {
-          if (fork.size < 0) {
-            if (fork.size == -3)
-              localSkipped += 4;
-            else
-              break scan;
-          } else if (fork.id >= minRepeatType) {
-            localSkipped += 4;
-          }
-          fork.next();
-        }
-        start2 = nodeStart;
-        size += nodeSize2;
-        skip += localSkipped;
+        continue;
       }
+      let startPos = fork.pos - nodeSize2;
+      if (nodeSize2 < 0 || startPos < minPos || fork.start < minStart)
+        break;
+      let localSkipped = fork.id >= minRepeatType ? 4 : 0;
+      let nodeStart = fork.start;
+      fork.next();
+      while (fork.pos > startPos) {
+        if (fork.size < 0) {
+          if (fork.size == -3)
+            localSkipped += 4;
+          else
+            break scan;
+        } else if (fork.id >= minRepeatType) {
+          localSkipped += 4;
+        }
+        fork.next();
+      }
+      start2 = nodeStart;
+      size += nodeSize2;
+      skip += localSkipped;
+    }
     if (inRepeat < 0 || size == maxSize) {
       result.size = size;
       result.start = start2;
@@ -10259,7 +10265,7 @@ function balanceRange(balanceType, children, positions, from, to, start2, length
   );
   let localChildren = [], localPositions = [];
   function divide(children2, positions2, from2, to2, offset2) {
-    for (let i = from2; i < to2; ) {
+    for (let i = from2; i < to2;) {
       let groupFrom = i, groupStart = positions2[i], groupSize = nodeSize(balanceType, children2[i]);
       i++;
       for (; i < to2; i++) {
@@ -10353,7 +10359,7 @@ var Parser = class {
   */
   parse(input, fragments, ranges) {
     let parse2 = this.startParse(input, fragments, ranges);
-    for (; ; ) {
+    for (; ;) {
       let done = parse2.advance();
       if (done)
         return done;
@@ -10579,7 +10585,7 @@ var Stack = class _Stack {
   /// external tokenizers that want to make sure they only provide a
   /// given token when it applies.
   canShift(term) {
-    for (let sim = new SimulatedStack(this); ; ) {
+    for (let sim = new SimulatedStack(this); ;) {
       let action = this.p.parser.stateSlot(
         sim.state,
         4
@@ -10758,7 +10764,7 @@ var StackContext = class {
   }
 };
 var Recover;
-(function(Recover2) {
+(function (Recover2) {
   Recover2[Recover2["Insert"] = 200] = "Insert";
   Recover2[Recover2["Delete"] = 190] = "Delete";
   Recover2[Recover2["Reduce"] = 100] = "Reduce";
@@ -11045,47 +11051,47 @@ var ExternalTokenizer = class {
 function readToken(data, input, stack, group) {
   let state = 0, groupMask = 1 << group, { parser: parser2 } = stack.p, { dialect } = parser2;
   scan:
-    for (; ; ) {
-      if ((groupMask & data[state]) == 0)
-        break;
-      let accEnd = data[state + 1];
-      for (let i = state + 3; i < accEnd; i += 2)
-        if ((data[i + 1] & groupMask) > 0) {
-          let term = data[i];
-          if (dialect.allows(term) && (input.token.value == -1 || input.token.value == term || parser2.overrides(term, input.token.value))) {
-            input.acceptToken(term);
-            break;
-          }
+  for (; ;) {
+    if ((groupMask & data[state]) == 0)
+      break;
+    let accEnd = data[state + 1];
+    for (let i = state + 3; i < accEnd; i += 2)
+      if ((data[i + 1] & groupMask) > 0) {
+        let term = data[i];
+        if (dialect.allows(term) && (input.token.value == -1 || input.token.value == term || parser2.overrides(term, input.token.value))) {
+          input.acceptToken(term);
+          break;
         }
-      let next = input.next, low = 0, high = data[state + 2];
-      if (input.next < 0 && high > low && data[accEnd + high * 3 - 3] == 65535) {
-        state = data[accEnd + high * 3 - 1];
+      }
+    let next = input.next, low = 0, high = data[state + 2];
+    if (input.next < 0 && high > low && data[accEnd + high * 3 - 3] == 65535) {
+      state = data[accEnd + high * 3 - 1];
+      continue scan;
+    }
+    for (; low < high;) {
+      let mid = low + high >> 1;
+      let index = accEnd + mid + (mid << 1);
+      let from = data[index], to = data[index + 1];
+      if (next < from)
+        high = mid;
+      else if (next >= to)
+        low = mid + 1;
+      else {
+        state = data[index + 2];
+        input.advance();
         continue scan;
       }
-      for (; low < high; ) {
-        let mid = low + high >> 1;
-        let index = accEnd + mid + (mid << 1);
-        let from = data[index], to = data[index + 1];
-        if (next < from)
-          high = mid;
-        else if (next >= to)
-          low = mid + 1;
-        else {
-          state = data[index + 2];
-          input.advance();
-          continue scan;
-        }
-      }
-      break;
     }
+    break;
+  }
 }
 function decodeArray(input, Type = Uint16Array) {
   if (typeof input != "string")
     return input;
   let array = null;
-  for (let pos = 0, out = 0; pos < input.length; ) {
+  for (let pos = 0, out = 0; pos < input.length;) {
     let value = 0;
-    for (; ; ) {
+    for (; ;) {
       let next = input.charCodeAt(pos++), stop = false;
       if (next == 126) {
         value = 65535;
@@ -11115,15 +11121,15 @@ function decodeArray(input, Type = Uint16Array) {
 var verbose = typeof process != "undefined" && process.env && /\bparse\b/.test(process.env.LOG);
 var stackIDs = null;
 var Safety;
-(function(Safety2) {
+(function (Safety2) {
   Safety2[Safety2["Margin"] = 25] = "Margin";
 })(Safety || (Safety = {}));
 function cutAt(tree, pos, side) {
   let cursor = tree.cursor(IterMode.IncludeAnonymous);
   cursor.moveTo(pos);
-  for (; ; ) {
+  for (; ;) {
     if (!(side < 0 ? cursor.childBefore(pos) : cursor.childAfter(pos)))
-      for (; ; ) {
+      for (; ;) {
         if ((side < 0 ? cursor.to < pos : cursor.from > pos) && !cursor.type.isError)
           return side < 0 ? Math.max(0, Math.min(
             cursor.to - 1,
@@ -11180,7 +11186,7 @@ var FragmentCursor = class {
       this.nextFragment();
     if (!this.fragment)
       return null;
-    for (; ; ) {
+    for (; ;) {
       let last = this.trees.length - 1;
       if (last < 0) {
         this.nextFragment();
@@ -11343,7 +11349,7 @@ var TokenCache = class {
   }
 };
 var Rec;
-(function(Rec2) {
+(function (Rec2) {
   Rec2[Rec2["Distance"] = 5] = "Distance";
   Rec2[Rec2["MaxRemainingPerStep"] = 3] = "MaxRemainingPerStep";
   Rec2[Rec2["MinBufferLengthPrune"] = 500] = "MinBufferLengthPrune";
@@ -11383,7 +11389,7 @@ var Parse = class {
     let stopped, stoppedTokens;
     for (let i = 0; i < stacks.length; i++) {
       let stack = stacks[i];
-      for (; ; ) {
+      for (; ;) {
         this.tokens.mainToken = null;
         if (stack.pos > pos) {
           newStacks.push(stack);
@@ -11429,20 +11435,20 @@ var Parse = class {
         this.recovering--;
     } else if (newStacks.length > 1) {
       outer:
-        for (let i = 0; i < newStacks.length - 1; i++) {
-          let stack = newStacks[i];
-          for (let j = i + 1; j < newStacks.length; j++) {
-            let other = newStacks[j];
-            if (stack.sameState(other) || stack.buffer.length > 500 && other.buffer.length > 500) {
-              if ((stack.score - other.score || stack.buffer.length - other.buffer.length) > 0) {
-                newStacks.splice(j--, 1);
-              } else {
-                newStacks.splice(i--, 1);
-                continue outer;
-              }
+      for (let i = 0; i < newStacks.length - 1; i++) {
+        let stack = newStacks[i];
+        for (let j = i + 1; j < newStacks.length; j++) {
+          let other = newStacks[j];
+          if (stack.sameState(other) || stack.buffer.length > 500 && other.buffer.length > 500) {
+            if ((stack.score - other.score || stack.buffer.length - other.buffer.length) > 0) {
+              newStacks.splice(j--, 1);
+            } else {
+              newStacks.splice(i--, 1);
+              continue outer;
             }
           }
         }
+      }
     }
     this.minStackPos = newStacks[0].pos;
     for (let i = 1; i < newStacks.length; i++)
@@ -11466,7 +11472,7 @@ var Parse = class {
       return stack.forceReduce() ? stack : null;
     if (this.fragments) {
       let strictCx = stack.curContext && stack.curContext.tracker.strict, cxHash = strictCx ? stack.curContext.hash : 0;
-      for (let cached = this.fragments.nodeAt(start2); cached; ) {
+      for (let cached = this.fragments.nodeAt(start2); cached;) {
         let match = this.parser.nodeSet.types[cached.type.id] == cached.type ? parser2.getGoto(stack.state, cached.type.id) : -1;
         if (match > -1 && cached.length && (!strictCx || (cached.prop(NodeProp.contextHash) || 0) == cxHash)) {
           stack.useNode(cached, match);
@@ -11502,7 +11508,7 @@ var Parse = class {
       }
     }
     let actions = this.tokens.getActions(stack);
-    for (let i = 0; i < actions.length; ) {
+    for (let i = 0; i < actions.length;) {
       let action = actions[i++], term = actions[i++], end2 = actions[i++];
       let last = i == actions.length || !split;
       let localStack = last ? stack : stack.split();
@@ -11526,7 +11532,7 @@ var Parse = class {
   // forward and was given to `pushStackDedup`.
   advanceFully(stack, newStacks) {
     let pos = stack.pos;
-    for (; ; ) {
+    for (; ;) {
       if (!this.advanceStack(stack, null, null))
         return false;
       if (stack.pos > pos) {
@@ -11658,7 +11664,7 @@ var LRParser = class _LRParser extends Parser {
         let prop = propSpec[0];
         if (typeof prop == "string")
           prop = NodeProp[prop];
-        for (let i = 1; i < propSpec.length; ) {
+        for (let i = 1; i < propSpec.length;) {
           let next = propSpec[i++];
           if (next >= 0) {
             setProp(next, prop, propSpec[i++]);
@@ -11714,7 +11720,7 @@ var LRParser = class _LRParser extends Parser {
     let table = this.goto;
     if (term >= table[0])
       return -1;
-    for (let pos = table[term + 1]; ; ) {
+    for (let pos = table[term + 1]; ;) {
       let groupTag = table[pos++], last = groupTag & 1;
       let target = table[pos++];
       if (last && loose)
@@ -11891,7 +11897,7 @@ var LRParser = class _LRParser extends Parser {
     let disabled = null;
     for (let i = 0; i < values.length; i++)
       if (!flags[i]) {
-        for (let j = this.dialects[values[i]], id2; (id2 = this.data[j++]) != 65535; )
+        for (let j = this.dialects[values[i]], id2; (id2 = this.data[j++]) != 65535;)
           (disabled || (disabled = new Uint8Array(this.maxTerm + 1)))[id2] = 1;
       }
     return new Dialect(dialect, flags, disabled);
@@ -12148,60 +12154,60 @@ var import_view = require("@codemirror/view");
 var import_autocomplete = require("@codemirror/autocomplete");
 var snippets = [
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("function ${name}(${params}) {\n	${}\n}", {
-    label: "function",
-    detail: "definition",
-    type: "keyword"
-  }),
+  label: "function",
+  detail: "definition",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("for (let ${index} = 0; ${index} < ${bound}; ${index}++) {\n	${}\n}", {
-    label: "for",
-    detail: "loop",
-    type: "keyword"
-  }),
+  label: "for",
+  detail: "loop",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("for (let ${name} of ${collection}) {\n	${}\n}", {
-    label: "for",
-    detail: "of loop",
-    type: "keyword"
-  }),
+  label: "for",
+  detail: "of loop",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("do {\n	${}\n} while (${})", {
-    label: "do",
-    detail: "loop",
-    type: "keyword"
-  }),
+  label: "do",
+  detail: "loop",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("while (${}) {\n	${}\n}", {
-    label: "while",
-    detail: "loop",
-    type: "keyword"
-  }),
+  label: "while",
+  detail: "loop",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("try {\n	${}\n} catch (${error}) {\n	${}\n}", {
-    label: "try",
-    detail: "/ catch block",
-    type: "keyword"
-  }),
+  label: "try",
+  detail: "/ catch block",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("if (${}) {\n	${}\n}", {
-    label: "if",
-    detail: "block",
-    type: "keyword"
-  }),
+  label: "if",
+  detail: "block",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("if (${}) {\n	${}\n} else {\n	${}\n}", {
-    label: "if",
-    detail: "/ else block",
-    type: "keyword"
-  }),
+  label: "if",
+  detail: "/ else block",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)("class ${name} {\n	constructor(${params}) {\n		${}\n	}\n}", {
-    label: "class",
-    detail: "definition",
-    type: "keyword"
-  }),
+  label: "class",
+  detail: "definition",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)('import {${names}} from "${module}"\n${}', {
-    label: "import",
-    detail: "named",
-    type: "keyword"
-  }),
+  label: "import",
+  detail: "named",
+  type: "keyword"
+}),
   /* @__PURE__ */ (0, import_autocomplete.snippetCompletion)('import ${name} from "${module}"\n${}', {
-    label: "import",
-    detail: "default",
-    type: "keyword"
-  })
+  label: "import",
+  detail: "default",
+  type: "keyword"
+})
 ];
 var cache = /* @__PURE__ */ new NodeWeakMap();
 var ScopeNodes = /* @__PURE__ */ new Set([
@@ -12300,35 +12306,35 @@ var javascriptLanguage = /* @__PURE__ */ import_language.LRLanguage.define({
   parser: /* @__PURE__ */ parser.configure({
     props: [
       /* @__PURE__ */ import_language.indentNodeProp.add({
-        IfStatement: /* @__PURE__ */ (0, import_language.continuedIndent)({ except: /^\s*({|else\b)/ }),
-        TryStatement: /* @__PURE__ */ (0, import_language.continuedIndent)({ except: /^\s*({|catch\b|finally\b)/ }),
-        LabeledStatement: import_language.flatIndent,
-        SwitchBody: (context) => {
-          let after = context.textAfter, closed = /^\s*\}/.test(after), isCase = /^\s*(case|default)\b/.test(after);
-          return context.baseIndent + (closed ? 0 : isCase ? 1 : 2) * context.unit;
-        },
-        Block: /* @__PURE__ */ (0, import_language.delimitedIndent)({ closing: "}" }),
-        ArrowFunction: (cx) => cx.baseIndent + cx.unit,
-        "TemplateString BlockComment": () => null,
-        "Statement Property": /* @__PURE__ */ (0, import_language.continuedIndent)({ except: /^{/ }),
-        JSXElement(context) {
-          let closed = /^\s*<\//.test(context.textAfter);
-          return context.lineIndent(context.node.from) + (closed ? 0 : context.unit);
-        },
-        JSXEscape(context) {
-          let closed = /\s*\}/.test(context.textAfter);
-          return context.lineIndent(context.node.from) + (closed ? 0 : context.unit);
-        },
-        "JSXOpenTag JSXSelfClosingTag"(context) {
-          return context.column(context.node.from) + context.unit;
-        }
-      }),
+      IfStatement: /* @__PURE__ */ (0, import_language.continuedIndent)({ except: /^\s*({|else\b)/ }),
+      TryStatement: /* @__PURE__ */ (0, import_language.continuedIndent)({ except: /^\s*({|catch\b|finally\b)/ }),
+      LabeledStatement: import_language.flatIndent,
+      SwitchBody: (context) => {
+        let after = context.textAfter, closed = /^\s*\}/.test(after), isCase = /^\s*(case|default)\b/.test(after);
+        return context.baseIndent + (closed ? 0 : isCase ? 1 : 2) * context.unit;
+      },
+      Block: /* @__PURE__ */ (0, import_language.delimitedIndent)({ closing: "}" }),
+      ArrowFunction: (cx) => cx.baseIndent + cx.unit,
+      "TemplateString BlockComment": () => null,
+      "Statement Property": /* @__PURE__ */ (0, import_language.continuedIndent)({ except: /^{/ }),
+      JSXElement(context) {
+        let closed = /^\s*<\//.test(context.textAfter);
+        return context.lineIndent(context.node.from) + (closed ? 0 : context.unit);
+      },
+      JSXEscape(context) {
+        let closed = /\s*\}/.test(context.textAfter);
+        return context.lineIndent(context.node.from) + (closed ? 0 : context.unit);
+      },
+      "JSXOpenTag JSXSelfClosingTag"(context) {
+        return context.column(context.node.from) + context.unit;
+      }
+    }),
       /* @__PURE__ */ import_language.foldNodeProp.add({
-        "Block ClassBody SwitchBody EnumBody ObjectExpression ArrayExpression": import_language.foldInside,
-        BlockComment(tree) {
-          return { from: tree.from + 2, to: tree.to - 2 };
-        }
-      })
+      "Block ClassBody SwitchBody EnumBody ObjectExpression ArrayExpression": import_language.foldInside,
+      BlockComment(tree) {
+        return { from: tree.from + 2, to: tree.to - 2 };
+      }
+    })
     ]
   }),
   languageData: {
@@ -14014,7 +14020,7 @@ var runMatrixShortcuts = (view, ctx, key, shiftKey) => {
       const nextLine = d.line(nextLineNo);
       setCursor(view, nextLine.to);
     } else {
-      view.dispatch(view.state.replaceSelection(" \\\\\n"));
+      view.dispatch(view.state.replaceSelection(" \\\\\\\\\n"));
     }
     return true;
   } else {
