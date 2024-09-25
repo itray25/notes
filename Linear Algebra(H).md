@@ -59,6 +59,8 @@ a_{m1} & a_{m2} & a_{m3} & \dots & a_{mn} & b_{m}
 $$  
 
 2.3 **基础定义**  
+$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$
+
 -  $\begin{pmatrix}a_{1},a_{2},\dots\end{pmatrix}$ 称为**行矩阵**/行向量  
 -  $\begin{pmatrix}a_{1}\\a_{2}\\\dots\end{pmatrix}$ 称为**列矩阵**  
 - $m=n$ 的矩阵称为**方阵**，其左上到右下称为**主对角线**，右上到左下称为**副对角线**  
