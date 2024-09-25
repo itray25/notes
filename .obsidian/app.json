@@ -1,4 +1,5 @@
 {
   "vimMode": true,
-  "strictLineBreaks": true
+  "strictLineBreaks": true,
+  "attachmentFolderPath": "./attachments"
 }

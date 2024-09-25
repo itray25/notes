@@ -3,5 +3,6 @@
   "obsidian-vimrc-support",
   "better-export-pdf",
   "obsius-publish",
-  "obsidian-plugin-prettier"
+  "obsidian-to-anki-plugin",
+  "obsidian-latex-suite"
 ]

@@ -1,0 +1,205 @@
+{
+  "settings": {
+    "CUSTOM_REGEXPS": {
+      "Basic": "((?:[^\\n][\\n]?)+) #c ?\\n*((?:\\n(?:^.{1,3}$|^.{4}(?<!<!--).*))+)",
+      "Cloze": "",
+      "IRead": "",
+      "Vocabulary": "",
+      "图片遮盖": "",
+      "基础": "",
+      "填空(ankigaokao)": "",
+      "填空(Anki高考)": "",
+      "填空题": "",
+      "正-->反(ankigaokao)": "",
+      "正-->反(ankigaokao)+": "",
+      "看看就好(Anki高考)": "",
+      "看看就好(Anki高考)+": "",
+      "英语单词模板(vocab配色)": "",
+      "问答(Anki高考)": "",
+      "问答题": "",
+      "问答题（同时生成翻转的卡片<可选>）": "",
+      "问答题（同时生成翻转的卡片）": "",
+      "问答题（输入答案）": "",
+      "高考64篇目古诗文背诵": ""
+    },
+    "FILE_LINK_FIELDS": {
+      "Basic": "Front",
+      "Cloze": "Text",
+      "IRead": "Text",
+      "Vocabulary": "英语单词",
+      "图片遮盖": "遮盖",
+      "基础": "正面",
+      "填空(ankigaokao)": "文字",
+      "填空(Anki高考)": "知识",
+      "填空题": "文字",
+      "正-->反(ankigaokao)": "问题",
+      "正-->反(ankigaokao)+": "问题",
+      "看看就好(Anki高考)": "文本",
+      "看看就好(Anki高考)+": "文本",
+      "英语单词模板(vocab配色)": "英语单词",
+      "问答(Anki高考)": "问题",
+      "问答题": "正面",
+      "问答题（同时生成翻转的卡片<可选>）": "正面",
+      "问答题（同时生成翻转的卡片）": "正面",
+      "问答题（输入答案）": "正面",
+      "高考64篇目古诗文背诵": "序号"
+    },
+    "CONTEXT_FIELDS": {},
+    "FOLDER_DECKS": {},
+    "FOLDER_TAGS": {},
+    "Syntax": {
+      "Begin Note": "START",
+      "End Note": "END",
+      "Begin Inline Note": "STARTI",
+      "End Inline Note": "ENDI",
+      "Target Deck Line": "TARGET DECK",
+      "File Tags Line": "FILE TAGS",
+      "Delete Note Line": "DELETE",
+      "Frozen Fields Line": "FROZEN"
+    },
+    "Defaults": {
+      "Scan Directory": "",
+      "Tag": "Obsidian_to_Anki",
+      "Deck": "Default",
+      "Scheduling Interval": 0,
+      "Add File Link": false,
+      "Add Context": false,
+      "CurlyCloze": false,
+      "CurlyCloze - Highlights to Clozes": false,
+      "ID Comments": true,
+      "Add Obsidian Tags": false
+    },
+    "IGNORED_FILE_GLOBS": [
+      "**/*.excalidraw.md"
+    ]
+  },
+  "Added Media": [],
+  "File Hashes": {
+    "College English.md": "26b6f1a9c1ce4bcae6d2dfdbd32d0ca5",
+    "README.md": "296504cf015f88672ec619a9b282f824",
+    "Mathematical analysis (H).md": "c48558c6a0bd0e78776597339edc60cf",
+    "Fundamental of Programming(H).md": "a49a6488008c6d499192f6f001c3bec8"
+  },
+  "fields_dict": {
+    "Basic": [
+      "Front",
+      "Back"
+    ],
+    "Cloze": [
+      "Text",
+      "Back Extra"
+    ],
+    "IRead": [
+      "Text"
+    ],
+    "Vocabulary": [
+      "英语单词",
+      "英美音标",
+      "中文释义",
+      "英语例句",
+      "中文例句",
+      "释义分布",
+      "词性分布",
+      "vocabulary简明",
+      "vocabulary扩展",
+      "柯林斯星级",
+      "柯林斯解释",
+      "英语发音"
+    ],
+    "图片遮盖": [
+      "遮盖",
+      "图片",
+      "标题",
+      "背面额外",
+      "注释"
+    ],
+    "基础": [
+      "正面",
+      "背面"
+    ],
+    "填空(ankigaokao)": [
+      "文字",
+      "《》",
+      "评论",
+      "举例",
+      "拓展"
+    ],
+    "填空(Anki高考)": [
+      "知识",
+      "《》",
+      "评论",
+      "举例",
+      "拓展"
+    ],
+    "填空题": [
+      "文字",
+      "背面额外"
+    ],
+    "正-->反(ankigaokao)": [
+      "问题",
+      "《》",
+      "答案",
+      "评论",
+      "举例",
+      "拓展"
+    ],
+    "正-->反(ankigaokao)+": [
+      "问题",
+      "《》",
+      "答案",
+      "评论",
+      "举例",
+      "拓展"
+    ],
+    "看看就好(Anki高考)": [
+      "文本"
+    ],
+    "看看就好(Anki高考)+": [
+      "文本"
+    ],
+    "英语单词模板(vocab配色)": [
+      "英语单词",
+      "英美音标",
+      "中文释义",
+      "英语例句",
+      "中文例句",
+      "vocabulary简明",
+      "vocabulary扩展",
+      "柯林斯星级",
+      "柯林斯解释",
+      "英语发音"
+    ],
+    "问答(Anki高考)": [
+      "问题",
+      "《》",
+      "答案",
+      "评论",
+      "举例",
+      "拓展"
+    ],
+    "问答题": [
+      "正面",
+      "背面"
+    ],
+    "问答题（同时生成翻转的卡片<可选>）": [
+      "正面",
+      "背面",
+      "添加翻转的卡片"
+    ],
+    "问答题（同时生成翻转的卡片）": [
+      "正面",
+      "背面"
+    ],
+    "问答题（输入答案）": [
+      "正面",
+      "背面"
+    ],
+    "高考64篇目古诗文背诵": [
+      "序号",
+      "标题",
+      "正文带标记",
+      "备注",
+      "标记读法"
+    ]
+  }
+}
