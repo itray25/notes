@@ -134,7 +134,7 @@ $$
 > 若 $\exists k \in \mathbb{N} ,\text{使得对} \forall n<k,n\in \mathbb{N}\text{有}a_{n}=b_{n},\text{且}a_{n+1}>b_{n+1}$ 则称 $a>b$
 
 $\eta=n_{0}.n_{1}n_{2}n_{3}\dots n_{k}n_{k+1}\dots$  
- $x>\eta$ 故 $x=a_{0}.a_{1}a_{2}a_{3}\dots a_{k}a_{k+1}\dots\geq n_{0}.n_{1}n_{2}n_{3}\dots n_{k}a_{k+1}\geq n_{0}.n_{1}n_{2}n_{3}\dots n_{k}n_{k+1}+\frac{1}{10^{k+1}}$  
+ $x>\eta$ 故 $x=a_{0}.a_{1}a_{2}a_{3}\dots a_{k-1}a_{k}\dots\geq n_{0}.n_{1}n_{2}n_{3}\dots n_{k-1}a_{k}\geq n_{0}.n_{1}n_{2}n_{3}\dots n_{k-1}n_{k}+\frac{1}{10^{k}}$  
  但此时 $x$ 超出了 $[n_{0}.n_{1}\dots n_{k},n_{0}.n_{1}\dots n_{k}+\frac{1}{10^k})$ 区间，而该区间后必无 $S$ 的元素，矛盾  
  因此 $\eta$ 为 $S$ 的上界 .
 
