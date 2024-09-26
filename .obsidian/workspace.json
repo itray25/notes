@@ -42,7 +42,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -108,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linear Algebra(H).md",
+                "file": "Mathematical analysis (H).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -125,7 +125,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linear Algebra(H).md",
+                "file": "Mathematical analysis (H).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -148,7 +148,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linear Algebra(H).md"
+                "file": "Mathematical analysis (H).md"
               }
             }
           },
@@ -179,10 +179,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "25928b49de7998f2",
+  "active": "8171ddf742f40357",
   "lastOpenFiles": [
-    "Mathematical analysis (H).md",
     "Linear Algebra(H).md",
+    "Mathematical analysis (H).md",
     "College English.md",
     "Pasted image 20240923230754.png",
     "Pasted image 20240923230721.png",
