@@ -133,7 +133,7 @@ $=n_{0}.n_{1}n_{2}n_{3}\dots n_{k}\dots-\frac{1}{10^k}\leq =n_{0}.n_{1}n_{2}n_{3
 > 2. $\forall \epsilon>0,\exists x\in S,\text{使得}x>y-\epsilon$ (最小上界)  
 
 该式 $\eta$ 与 $x$ 均 $+a$ ，显然成立  
-###### **P5 证明上确界的唯一性  
+###### **P5 证明上确界的唯一性**  
 
 假设 $\eta,\eta^{’}$ 均为 $Sup(S)$ ,且 $\eta>\eta^{'}$ ,令 $\epsilon=\frac{\eta-\eta{'}}{2}$  
 故 $\forall x\in S,x\leq \eta^{'}$  (对 $\eta{'}$ 使用上确界条件一)   
