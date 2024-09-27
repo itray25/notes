@@ -171,8 +171,62 @@ $=n_{0}.n_{1}n_{2}n_{3}\dots n_{k}\dots-\frac{1}{10^k}\leq =n_{0}.n_{1}n_{2}n_{3
 如 $\mathbb{Z}$ 与 $\mathbb{N}$ 等势，即 $\mathbb{Z}$ 按照 $0,1,-1,2,-2,...$ 的顺序排列，序数可唯一对应一个正整数  
 称 $\mathbb{N}$ 的势为可数的，与之等势的集合为可数集  
 易证：
--  $\mathbb{Q}$ 也为可数势(通过 $\frac{p}{q}$ 的 $q$ 依次从小到大排列，去除重复项)  
+-  $\mathbb{Q}$ 也为可数集(由于有限个可数集的并集也为可数集，只需考虑 $[0,1)\cap \mathbb{Q}$ 是否可；通过 $\frac{p}{q}$ 的 $q$ 依次从小到大排列，去除重复项)  
 - 有限个可数集的并集也为可数集(通过对角线交替排列)  
 
 (2) 康托尔定理  
  $card(X)<card(2^X)$  
+ (3) $\mathbb{R}$ 不为可数集  
+ 证：设 $x_{j}=0.a_{j}^1a_{j}^2a_{j}^3\dots$   
+ 构造 $t=0.t_{1}t_{2}t_{3}\dots$ 使得 $t_{1}\neq a_{1}^1,t_{2}\neq a_{2}^2,\dots$   
+ 故 $t$ 不在该集合中，即不可数  
+ 而 $\mathbb{R}$ 称为数的连续统  
+ (4) 任何一个无限集 $A$ 均包含一个可数集 $S$  
+ 通过在  $A\backslash S$ 中取出项加入 $S$ 迭代，可构造可数集 $S$  
+
+## 3 数列极限  
+### 3.1 数列  
+定义：一类特殊的函数 $f: \mathbb{N}\rightarrow\mathbb{R},f(n)=a_{n}$   
+### 3.2 $\epsilon-N$ 语言    
+- 对于数列 $\{x_{n}\}$ ，若对 $\forall\epsilon>0,\exists N\in\mathbb{N^+}$ 使得对 $\forall n>N,\text{有} |x_{n}-a|<\epsilon$ 则称 $a$ 为 $\{x_{n}\}$ 的极限，记为 $\lim_{ n \to \infty }x_{n}=a$ 
+- 若存在极限，则称该数列收敛；反之，称该数列发散  
+
+### 3.3 放缩证明数列极限  
+#### 例题1 证明：$\lim_{ n \to \infty }\frac{(-1)^n}{n}=0$   
+证：  
+$$
+\text{对}\forall\epsilon>0,\text{令} N=[\frac{1}{\epsilon}]+1
+$$
+> 注意 $N\in\mathbb{N}$ !  
+
+
+$$
+\text{故对}\forall n>N,|0-\frac{(-1)^n}{n}|=\frac{1}{n}<\epsilon
+$$  
+ $$
+ \text{故} \lim_{ n \to \infty }\frac{(-1)^n}{n}=0\text{成立.} 
+$$  
+#### 例题2 见课本P22 例2.1.3  
+> 注意 $n\geq 2$ 的限定及 $N=max\{\left[ \frac{1}{\epsilon} \right],2\}$   
+
+#### 例题3 证明： $\lim_{ n \to \infty }q^n=0 (|q|<1)$  
+证：
+(1) $q=0$ 时，显然成立  
+(2) $q\neq 0$ 时 $\forall \epsilon>0$ , $\exists N=[|\log_{|q|}\epsilon|]+1$ 使得 $|q^N-0|<\epsilon$   
+即得证.  
+#### 例题4 证明： $a>1,\lim_{ n \to \infty }\sqrt[n]{a}=1$  
+证：
+设 $\sqrt[n]{a}-1=\alpha$  
+$\therefore a=(\alpha+1)^n>1+\alpha n$  
+> $(1+x)^n>1+x n$  
+
+$\forall \epsilon>0$ , $\exists N=[\frac{a-1}{\epsilon}]+1,n>N$  
+有 $|\sqrt[n]{a}-1|\leq \frac{a-1}{n}<\epsilon$  
+即得证.  
+#### 例题5 证明： $\lim_{ n \to \infty }\frac{a^n}{n!}=0(a>0)$  
+证：  
+取 $k\in\mathbb{N},\text{使}a<k$ ,记 $\frac{a^k}{k!}=K$  
+ $\forall\epsilon>0,\exists N=max\left( [\frac{ka}{\epsilon}]+1,k \right)$  
+  $|\frac{a^n}{n!}|=\frac{a^ka^{n-k}}{k!(k+1)\dots n}\leq \frac{Ka}{n}<\epsilon$ 
+  即得证
+#### 例题6 见课本P22 例2.1.4
