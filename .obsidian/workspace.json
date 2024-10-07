@@ -31,14 +31,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Fundamental of Programming(H).md",
+                "file": "Linear Algebra(H).md",
                 "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8b7a952eb82234a0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Mathematical analysis (H).md",
+                "mode": "preview",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -104,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Fundamental of Programming(H).md",
+                "file": "Mathematical analysis (H).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Fundamental of Programming(H).md",
+                "file": "Mathematical analysis (H).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Fundamental of Programming(H).md"
+                "file": "Mathematical analysis (H).md"
               }
             }
           },
@@ -175,16 +187,18 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "25928b49de7998f2",
+  "active": "f5b1acce42def0fc",
   "lastOpenFiles": [
-    "Linear Algebra(H).md",
-    "Mathematical analysis (H).md",
-    "Pasted image 20240923230754.png",
     "College English.md",
-    "Pasted image 20240923230721.png",
-    "Pasted image 20240923230638.png",
-    "Fundamental of Programming(H).md",
+    "README.md",
     "15278352-9787115587558_C++程序设计：思想与方法 ideas and methods 慕课版 2.pdf",
+    "Mathematical analysis (H).md",
+    "Pasted image 20240923230638.png",
+    "Linear Algebra(H).md",
+    "未命名.md",
+    "Fundamental of Programming(H).md",
+    "Pasted image 20240923230754.png",
+    "Pasted image 20240923230721.png",
     "conflict-files-obsidian-git.md",
     "Mathematical analysis (H) 1.md",
     "first-year (1)/Mathematical analysis (H).md",

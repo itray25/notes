@@ -229,4 +229,54 @@ $\forall \epsilon>0$ , $\exists N=[\frac{a-1}{\epsilon}]+1,n>N$
  $\forall\epsilon>0,\exists N=max\left( [\frac{ka}{\epsilon}]+1,k \right)$  
   $|\frac{a^n}{n!}|=\frac{a^ka^{n-k}}{k!(k+1)\dots n}\leq \frac{Ka}{n}<\epsilon$ 
   即得证
-#### 例题6 见课本P22 例2.1.4
+#### 例题6 见课本P22 例2.1.4  
+### 3.4 数列极限的性质  
+#### (1)唯一性  
+ $a_{n}$ 收敛，则 $a_{n}$ 有唯一极限    
+ 证明：令两不同极限 $A,B$ , $\epsilon=\frac{A+B}{4}$ ，无法同时满足 $A,B$  的极限条件。    
+#### (2)有界性  
+ $a_{n}$ 收敛，则 $a_{n}$ 有界   
+#### (3)保序性  
+$\lim_{ n \to \infty }a_{n}>\lim_{ n \to \infty }b_{n}$ , 则 $\exists N\in \mathbb{N},\forall n>N,a_{n}>b_{n}$  
+ 证明：令两不同极限 $A,B$ , $\epsilon=\frac{A-B}{4}$ ，由极限条件可确定大小。     
+#### (4)保号性  
+ $\lim_{ n \to \infty }a_{n}=A>0,\exists N\in\mathbb{N},\forall n>N,a_{n}>\frac{A}{2}>0$  
+#### (5)夹逼性  
+ $a_{n}\leq b_{n}\leq c_{n},a_{n},b_{n},c_{n}\text{收敛},\lim_{ n \to \infty }a_{n}<\lim_{ n \to \infty }b_{n}<\lim_{ n \to \infty }c_{n}$  
+ 证明：将两个极限条件联立即可  
+ #### 例1 $\lim_{ n \to \infty } \frac{1}{n^2}+ \frac{1}{(n+1)^2}+\dots+ \frac{1}{(2n)^2}$  
+ 解： $0\leq \frac{1}{n^2}+ \frac{1}{(n+1)^2}+\dots+ \frac{1}{(2n)^2}\leq \frac{n+1}{n^2}\leq \frac{2}{n}$     
+ 由夹逼性 $\text{原式=}0$   
+ #### 例2 $\lim_{ n \to \infty } \frac{(2n-1)!!}{(2n)!!}$  
+ 解：由 $\frac{m-1}{m}< \frac{m}{m+1}$    
+  $a=$ 原式 $<\frac{2*4*6*\dots*2n}{3*5*7*\dots*(2n+1)}= \frac{2n!!}{(2n-1)!!} \frac{1}{2n+1}$  
+  $\therefore a< \frac{1}{a} \frac{1}{2n+1}, a< \frac{1}{\sqrt{2n+1 }}$  
+ 由夹逼性 $\text{原式=}0$   
+ #### (6)四则运算  
+ 当 $a_{n},b_{n}$ 均存在极限，则加减乘除运算可行。  
+ > 前提为两者都有极限，不可存在 $+\infty$ 之类的运算  
+
+**证明线性关系**： $\lim_{ n \to \infty }a_{n}=A,\lim_{ n \to \infty }b_{n}=B,\text{则}\lim_{ n \to \infty }(\lambda a_{n}+\mu b_{n})=\lambda A+\mu B$  
+证： $|\lambda a_{n}+\mu b_{n}-\lambda A-\mu B|\leq|\lambda(a_{n}-A)|+|\mu(b_{n}-B)|$  
+ $|a_{n}-A|< \frac{1}{\lambda+\mu+1}\epsilon,|b_{n}-B|< \frac{1}{\lambda+\mu+1}\epsilon,|\lambda(a_{n}-A)|+|\mu(b_{n}-B)|<\epsilon$  
+ 由极限定义，得证  
+ **证明乘法关系**：  $\lim_{ n \to \infty }a_{n}=A,\lim_{ n \to \infty }b_{n}=B,\text{则}\lim_{ n \to \infty }a_{n}b_{n}=AB$  
+ 证：$|a_{n}b_{n}-AB|=|a_{n}b_{n}-a_{n}B+a_{n}B-AB|\leq|a_{n}(b_{n}-B)|+|B(a_{n}-A)|$  
+ $\because a_{n}\text{有界}\therefore |a_{n}|<M,\text{令}|b_{n}-B|< \frac{\epsilon}{2|M|},|a_{n}-A|< \frac{\epsilon}{2(|B|+1)}$   
+  $\text{原式}<|M(b_{n}-B)|+|B(a_{n}-A)|<\epsilon$  
+  由极限定义，得证   
+ **证明除法关系**：  $\lim_{ n \to \infty }a_{n}=A,\lim_{ n \to \infty }b_{n}=B,\text{则}\lim_{ n \to \infty } \frac{a_{n}}{b_{n}} =\frac{A}{B}$  
+ 证： $| \frac{a_{n}}{b_{n}}- \frac{A}{B} |=| \frac{a_{n}B-b_{n}A}{b_{n}B}|$  
+  $\because\lim_{ n \to \infty }b_{n}=B\therefore|b_{n}|> \frac{|B|}{2}>0$  
+   $\therefore\text{原式}\leq| \frac{a_{n}B-AB+AB-b_{n}A}{B \frac{B}{2}}|=\frac{2(|B||a_{n}-A|+|A||b_{n}-B|)}{|B|^2}$  
+   令 $|a_{n}-A|< \frac{|B|}{4}\epsilon,|b_{n}-B|< \frac{B^2}{4|A|+1}\epsilon$  
+   则原式 $<\epsilon$ ,得证  
+ 
+ ### 3.5 无穷小  
+  $\lim_{ n \to \infty }x_{n}=0$ ，则称 $x_{n}$ 为无穷小  
+  #### (1) 性质  
+  若 $x_{n},y_{n}$ 是无穷小，则：  
+  - 对 $\alpha ,\beta\in\mathbb{R}$ ，$\alpha x_{n}+\beta y_{n}$ 也为无穷小  
+  -  $x_{n}y_{n}$ 为无穷小  
+  - $z_{n}$ 有界，则 $z_{n}x_{n}$ 为无穷小  
+  - $\lim_{ n \to \infty }t_{n}=a$ 当且仅当 $t_{n}-a$ 为无穷小  
