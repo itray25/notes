@@ -43,8 +43,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematical analysis (H).md",
-                "mode": "preview",
+                "file": "Linear Algebra(H).md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -100,7 +100,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 299.5
   },
   "right": {
     "id": "1299a42c2c43fbe0",
@@ -116,7 +116,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Mathematical analysis (H).md",
+                "file": "Linear Algebra(H).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -133,7 +133,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Mathematical analysis (H).md",
+                "file": "Linear Algebra(H).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -156,7 +156,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Mathematical analysis (H).md"
+                "file": "Linear Algebra(H).md"
               }
             }
           },
@@ -187,12 +187,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f5b1acce42def0fc",
+  "active": "8b7a952eb82234a0",
   "lastOpenFiles": [
+    "Mathematical analysis (H).md",
     "College English.md",
     "README.md",
     "15278352-9787115587558_C++程序设计：思想与方法 ideas and methods 慕课版 2.pdf",
-    "Mathematical analysis (H).md",
     "Pasted image 20240923230638.png",
     "Linear Algebra(H).md",
     "未命名.md",
