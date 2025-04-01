@@ -14,7 +14,9 @@
               "type": "image",
               "state": {
                 "file": "Pasted image 20240923230754.png"
-              }
+              },
+              "icon": "lucide-image",
+              "title": "Pasted image 20240923230754"
             }
           },
           {
@@ -22,7 +24,9 @@
             "type": "leaf",
             "state": {
               "type": "graph",
-              "state": {}
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "关系图谱"
             }
           },
           {
@@ -34,7 +38,9 @@
                 "file": "Linear Algebra(H).md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Linear Algebra(H)"
             }
           },
           {
@@ -43,14 +49,249 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Mathematical analysis (H).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Mathematical analysis (H)"
+            }
+          },
+          {
+            "id": "16620609ce3291b3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名 1"
+            }
+          },
+          {
+            "id": "96c6ef548952e35b",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.4"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.4"
+            }
+          },
+          {
+            "id": "a8598d9ec6637647",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名 2.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名 2"
+            }
+          },
+          {
+            "id": "892246955b8923b4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Linear Algebra(H).md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Linear Algebra(H)"
+            }
+          },
+          {
+            "id": "eeae0d02df2c37f4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "背诵.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "背诵"
+            }
+          },
+          {
+            "id": "dfff710728d7406e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名 3.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名 3"
+            }
+          },
+          {
+            "id": "7912f5e5fdb2c1cd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名 1.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名 1"
+            }
+          },
+          {
+            "id": "ae29e415ba80d109",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名 4.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名 4"
+            }
+          },
+          {
+            "id": "e5e659e7bae602c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "未命名 5.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "未命名 5"
+            }
+          },
+          {
+            "id": "26a48fe788eda930",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "日记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "日记"
+            }
+          },
+          {
+            "id": "d965c1a3b2c2d028",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "日记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "日记"
+            }
+          },
+          {
+            "id": "7489a232d904d3a7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "日记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "日记"
+            }
+          },
+          {
+            "id": "a001bdeb166b95ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "日记.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "日记"
+            }
+          },
+          {
+            "id": "9ddf068d3c429d1a",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.8.7"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.8.7"
+            }
+          },
+          {
+            "id": "db7854a73d24cb59",
+            "type": "leaf",
+            "state": {
+              "type": "diff-view",
+              "state": {
+                "file": ".obsidian/plugins/better-export-pdf/data.json",
+                "staged": false
+              },
+              "icon": "git-pull-request",
+              "title": "Diff View (data.json)"
+            }
+          },
+          {
+            "id": "72e56a4edbd6916f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "新的起点.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "新的起点"
+            }
+          },
+          {
+            "id": "3a1164d7d0ecf585",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "第一周 3.31-4.6.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "第一周 3.31-4.6"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 20
       }
     ],
     "direction": "vertical"
@@ -69,8 +310,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
             }
           },
           {
@@ -85,7 +329,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
             }
           },
           {
@@ -93,7 +339,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "书签"
             }
           }
         ]
@@ -116,7 +364,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linear Algebra(H).md",
+                "file": "未命名 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -124,7 +372,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "未命名 2 的反向链接列表"
             }
           },
           {
@@ -133,10 +383,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Linear Algebra(H).md",
+                "file": "未命名 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "未命名 2 的出链列表"
             }
           },
           {
@@ -147,7 +399,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
             }
           },
           {
@@ -156,8 +410,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Linear Algebra(H).md"
-              }
+                "file": "未命名 2.md"
+              },
+              "icon": "lucide-list",
+              "title": "未命名 2 的大纲"
             }
           },
           {
@@ -165,7 +421,9 @@
             "type": "leaf",
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
@@ -187,18 +445,38 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8b7a952eb82234a0",
+  "active": "3a1164d7d0ecf585",
   "lastOpenFiles": [
-    "Mathematical analysis (H).md",
-    "College English.md",
+    "第一周 3.31-4.6.md",
+    "新的起点.md",
+    "Discrete Math.md",
+    "Discrete Math 2.md",
+    "2025-03-31.md",
     "README.md",
+    "日记.md",
+    "未命名 2.md",
+    "未命名 3.md",
+    "未命名 1.md",
+    "attachments/IMG_20250130_132136 2.jpg",
+    "attachments/0e9e1482f2b2e2f32c59f26e7aa26fd.jpg",
+    "attachments/52d22711a0911e26bffd7f9a3d47729.jpg",
+    "attachments/5280833d50a892d665a989fd329c5bf.jpg",
+    "attachments/a9dc361a7cd35d817558733a654c850.jpg",
+    "attachments/a4cc9fbd471ab244bde8fa12a53ffbc.jpg",
+    "attachments/be569aaf1b4971bd42ac36bc3b29f01.jpg",
+    "attachments/895d2612c15e10f5ac88c2bb6c02a27.jpg",
+    "attachments/c6c1ff236ae982772716f70d1416131.jpg",
+    "attachments/1738423653649.jpg",
     "15278352-9787115587558_C++程序设计：思想与方法 ideas and methods 慕课版 2.pdf",
-    "Pasted image 20240923230638.png",
-    "Linear Algebra(H).md",
-    "未命名.md",
+    "未命名 5.md",
+    "未命名 4.md",
+    "背诵.md",
     "Fundamental of Programming(H).md",
-    "Pasted image 20240923230754.png",
-    "Pasted image 20240923230721.png",
+    "Linear Algebra(H).md",
+    "Mathematical analysis (H).md",
+    "AI1801-final homework.md",
+    "attachments",
+    "College English.md",
     "conflict-files-obsidian-git.md",
     "Mathematical analysis (H) 1.md",
     "first-year (1)/Mathematical analysis (H).md",

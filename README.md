@@ -1,1 +1,0 @@
-SJTU class notes
